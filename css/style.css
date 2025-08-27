@@ -150,3 +150,19 @@ body {
 .contact a:hover {
   color: #888;             /* Slightly lighter on hover */
 }
+
+/* =========================================
+   About box (right content top section)
+   ========================================= */
+.about-box {
+  border: 1px solid #fff;     /* White border */
+  padding: 1.5rem;            /* Inner spacing */
+  max-width: 600px;           /* Keep box from stretching too wide */
+  margin-bottom: 2rem;        /* Space below box */
+}
+
+.about-box p {
+  font-size: 1rem;            /* Normal readable size */
+  line-height: 1.5;           /* Comfortable spacing between lines */
+  color: #fff;                /* White text */
+}
