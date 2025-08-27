@@ -1,7 +1,8 @@
 /* =========================================
    Import Google Font (Roboto Mono, thin)
    ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap'); 
+/* Added 700 weight for bold name */
 
 /* =========================================
    Reset default browser styles
@@ -9,15 +10,15 @@
 * {
   margin: 0;                  /* Remove default browser margin */
   padding: 0;                 /* Remove default browser padding */
-  box-sizing: border-box;     /* Make width/height calculations predictable */
+  box-sizing: border-box;     /* Makes width/height calculations predictable */
 }
 
 /* =========================================
    Body styling
    ========================================= */
 body {
-  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif; /* Use thin, modern font stack */
-  font-weight: 300;            /* Light font weight for minimal look */
+  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif; /* Thin, modern font stack */
+  font-weight: 300;            /* Light font for minimal look */
   background: #000;            /* Full black background */
   color: #fff;                 /* White text color */
   height: 100vh;               /* Full viewport height */
@@ -30,7 +31,7 @@ body {
    Header section
    ========================================= */
 .header {
-  flex: 1;                     /* Takes equal height as footer */
+  flex: 1;                     /* Equal height as footer */
   background: #000;            /* Black background */
 }
 
@@ -38,7 +39,7 @@ body {
    Footer section
    ========================================= */
 .footer {
-  flex: 1;                     /* Takes equal height as header */
+  flex: 1;                     /* Equal height as header */
   background: #000;            /* Black background */
 }
 
@@ -46,7 +47,7 @@ body {
    Middle section (main layout area)
    ========================================= */
 .middle {
-  flex: 2;                     /* Height of middle section (adjustable, here double header/footer) */
+  flex: 3;                     /* Middle section taller than header/footer */
   display: flex;               /* Horizontal layout: left panel + right content */
   position: relative;          /* Needed for absolute positioning of left panel elements like vertical line */
 }
@@ -55,74 +56,75 @@ body {
    Left panel (sidebar)
    ========================================= */
 .left-panel {
-  width: 250px;                /* Fixed width for left panel */
+  width: 250px;                /* Fixed width */
   display: flex;               /* Flex container for profile + nav */
-  flex-direction: column;      /* Stack profile and nav vertically */
-  justify-content: flex-start; /* Align content near top of middle section */
+  flex-direction: column;      /* Stack items vertically */
+  justify-content: flex-start; /* Align text near top of middle section */
   padding-left: 2rem;          /* Space from left edge */
-  position: relative;          /* Required for absolute positioning of vertical line */
+  position: relative;          /* Required for absolute vertical line */
 }
 
 /* =========================================
    Floating vertical partition line
    ========================================= */
 .vertical-line {
-  position: absolute;          /* Absolute positioning inside left panel */
+  position: absolute;          /* Absolute inside left panel */
   top: 0;                      /* Start at top of middle section */
   bottom: 0;                   /* Extend to bottom of middle section */
-  left: 100%;                  /* Place line at right edge of panel */
+  left: 100%;                  /* Right edge of panel */
   width: 1px;                  /* Thin vertical line */
-  background-color: #555;      /* Slightly lighter grey to float on black */
-  /* This line spans full height of middle section, creating the "floating" effect between header/footer */
+  background-color: #555;      /* Slightly lighter grey */
 }
 
 /* =========================================
    Profile section (name + location)
    ========================================= */
 .profile {
-  margin-bottom: 2rem;         /* Space between profile and nav */
+  margin-bottom: 3rem;         /* More space between profile and nav section */
   text-align: left;            /* Align text to left */
 }
 
 .profile .name {
-  font-size: 1.1rem;           /* Slightly bigger than nav/location */
-  font-weight: 300;            /* Thin font for minimal look */
+  font-size: 1.2rem;           /* Slightly larger than other text */
+  font-weight: 700;            /* Bold name */
+  margin-top: 1rem;            /* Push name slightly down from top of middle section */
 }
 
 .profile .location {
-  font-size: 1rem;             /* Same size as nav */
+  font-size: 0.9rem;           /* Smaller font for location */
   font-weight: 300;            /* Thin font */
-  color: #aaa;                 /* Muted grey for secondary text */
-  margin-top: 0.5rem;          /* Space between name and location */
+  color: #aaa;                 /* Muted grey */
+  margin-top: 0.8rem;          /* More space between name and location */
 }
 
 /* =========================================
    Navigation menu
    ========================================= */
 .nav ul {
-  list-style: none;            /* Remove default bullet points */
-  display: flex;               /* Flex container for nav items */
+  list-style: none;            /* Remove bullet points */
+  display: flex;               /* Flex container */
   flex-direction: column;      /* Stack vertically */
-  gap: 1.5rem;                 /* Space between nav items */
+  gap: 1rem;                   /* Smaller space between nav links */
+  margin-top: 2rem;            /* Space between location and nav section */
 }
 
 .nav a {
-  color: #fff;                 /* White text for links */
+  color: #fff;                 /* White text */
   text-decoration: none;       /* Remove underline */
-  font-size: 1rem;             /* Same as location text */
+  font-size: 0.9rem;           /* Slightly smaller font for nav */
   font-weight: 300;            /* Thin font */
   letter-spacing: 0.5px;       /* Slight spacing for readability */
-  transition: color 0.3s;      /* Smooth hover transition */
+  transition: color 0.3s;      /* Smooth hover effect */
 }
 
 .nav a:hover {
-  color: #888;                 /* Slightly lighter grey on hover */
+  color: #888;                 /* Lighter grey on hover */
 }
 
 /* =========================================
    Right content area (main content)
    ========================================= */
 .main-content {
-  flex: 1;                     /* Take remaining width of middle section */
-  padding: 2rem;               /* Space inside content */
+  flex: 1;                     /* Take remaining width */
+  padding: 2rem;               /* Inner spacing */
 }
