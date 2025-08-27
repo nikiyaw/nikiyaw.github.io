@@ -7,9 +7,9 @@
    Reset default browser styles
    ========================================= */
 * {
-  margin: 0;       /* remove default margins */
-  padding: 0;      /* remove default padding */
-  box-sizing: border-box; /* ensures padding/border don't break sizing */
+  margin: 0;                  /* remove default margins */
+  padding: 0;                 /* remove default padding */
+  box-sizing: border-box;     /* makes sizing predictable */
 }
 
 /* =========================================
@@ -17,96 +17,96 @@
    ========================================= */
 body {
   font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif; /* main font stack */
-  font-weight: 300;  /* thin font for modern look */
-  background: #000;  /* full black background */
-  color: #fff;       /* white text color */
-  height: 100vh;     /* full viewport height */
-  display: flex;     /* enables flex for vertical centering if needed */
-  justify-content: center; /* center horizontally if needed */
-  align-items: center;     /* vertical centering of container */
+  font-weight: 300;         /* thin font for minimal look */
+  background: #000;         /* full black background */
+  color: #fff;              /* white text color */
+  height: 100vh;            /* full viewport height */
+  display: flex;            /* enable flex for horizontal layout */
+  justify-content: flex-start; /* left-align container */
+  align-items: stretch;     /* stretch vertically to fill viewport */
 }
 
 /* =========================================
    Container holding left panel and main content
    ========================================= */
 .container {
-  display: flex;    /* horizontal layout: left panel + main content */
-  height: 100vh;    /* full viewport height */
+  display: flex;            /* horizontal layout: left panel + main content */
+  height: 100%;             /* fill entire viewport height */
 }
 
 /* =========================================
    Left panel (sidebar)
    ========================================= */
 .left-panel {
-  width: 250px;            /* fixed width for left panel */
-  padding: 0 2rem;         /* horizontal padding, no vertical padding */
-  display: flex;            /* flex layout inside panel */
-  flex-direction: column;   /* stack items vertically */
-  justify-content: center;  /* vertically center all content */
-  position: relative;       /* needed for absolute-positioned vertical line */
+  width: 250px;            /* fixed width for panel */
+  padding: 2rem;           /* horizontal padding only */
+  display: flex;           /* vertical stacking of content */
+  flex-direction: column;
+  justify-content: flex-start; /* align items to top of panel */
+  position: relative;      /* for absolute-positioned vertical line */
 }
 
 /* =========================================
    Profile section (name + location)
    ========================================= */
 .profile {
-  margin-bottom: 6rem; /* space between profile and nav */
-  text-align: left;     /* align text to the left */
+  margin-bottom: 6rem;     /* space between profile and nav */
+  text-align: left;         /* align text to left */
 }
 
 .profile .name {
-  font-size: 1.2rem; /* slightly bigger than nav links */
-  font-weight: 300;  /* thin font */
-  line-height: 1.4;  /* spacing between name & location */
+  font-size: 1.2rem;       /* slightly bigger than nav links */
+  font-weight: 300;        /* thin font */
+  line-height: 1.4;        /* spacing between name & location */
 }
 
 .profile .location {
-  font-size: 1rem;   /* same as nav links */
-  font-weight: 300;
-  color: #aaa;       /* muted grey for location */
-  margin-top: 0.5rem; /* space between name and location */
+  font-size: 1rem;         /* same as nav links */
+  font-weight: 300;        /* thin font */
+  color: #aaa;             /* muted grey */
+  margin-top: 0.5rem;      /* space between name and location */
 }
 
 /* =========================================
    Navigation menu
    ========================================= */
 .nav ul {
-  list-style: none;          /* remove bullets */
-  display: flex;             /* vertical stack */
-  flex-direction: column;
-  gap: 2rem;                 /* space between nav items */
+  list-style: none;        /* remove bullets */
+  display: flex;
+  flex-direction: column;  /* vertical stacking */
+  gap: 2rem;               /* space between nav items */
 }
 
 .nav a {
-  color: #fff;               /* white nav links */
-  text-decoration: none;     /* remove underline */
-  font-weight: 300;          /* thin font */
-  font-size: 1rem;           /* consistent with location */
-  letter-spacing: 0.5px;     /* slight spacing for readability */
-  transition: color 0.3s;    /* smooth hover transition */
+  color: #fff;             /* white links */
+  text-decoration: none;   /* remove underline */
+  font-weight: 300;        /* thin font */
+  font-size: 1rem;         /* consistent with location */
+  letter-spacing: 0.5px;   /* slight spacing for readability */
+  transition: color 0.3s;  /* smooth hover transition */
 }
 
 .nav a:hover {
-  color: #888;               /* slightly lighter grey on hover */
+  color: #888;             /* slightly lighter grey on hover */
 }
 
 /* =========================================
    Floating vertical partition line
    ========================================= */
 .vertical-line {
-  width: 1px;           /* thin line */
-  background-color: #555; /* slightly lighter grey */
-  height: 70%;          /* line floats, doesn't touch top/bottom */
-  position: absolute;    /* positioned relative to left-panel */
-  top: 15%;              /* distance from top of panel (adjustable) */
-  left: 100%;            /* line at right edge of panel */
-  transform: translateX(-50%); /* center line exactly at panel edge */
+  width: 1px;              /* thin line */
+  background-color: #555;  /* slightly lighter grey */
+  height: 50%;             /* line floats, half the panel height */
+  position: absolute;      /* absolute positioning within panel */
+  top: 25%;                /* centers line vertically (25% top + 50% height + 25% bottom) */
+  left: 100%;              /* right edge of left panel */
+  transform: translateX(-50%); /* center line at panel edge */
 }
 
 /* =========================================
    Main content area (right panel)
    ========================================= */
 .main-content {
-  flex: 1;              /* take remaining width */
-  padding: 2rem;        /* spacing inside main content */
+  flex: 1;                /* take remaining width */
+  padding: 2rem;          /* spacing inside main content */
 }
