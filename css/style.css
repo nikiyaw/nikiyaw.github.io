@@ -155,14 +155,15 @@ body {
    About box (right content top section)
    ========================================= */
 .about-box {
-  border: 1px solid #fff;     /* White border */
-  padding: 1.5rem;            /* Inner spacing */
-  max-width: 600px;           /* Keep box from stretching too wide */
-  margin-bottom: 2rem;        /* Space below box */
+  border: 1px solid #FF991C;     /* Thin white outline */
+  color: #fff;                /* Keep text white */
+  padding: 1.5rem;            /* Space inside the box */
+  max-width: 600px;           /* Limit width so it doesn’t stretch too wide */
+  margin-bottom: 2rem;        /* Space below the box */
+  border-radius: 6px;         /* Slightly rounded corners (optional) */
 }
 
 .about-box p {
-  font-size: 1rem;            /* Normal readable size */
+  font-size: 0.9rem;            /* Normal readable size */
   line-height: 1.5;           /* Comfortable spacing between lines */
-  color: #fff;                /* White text */
 }
