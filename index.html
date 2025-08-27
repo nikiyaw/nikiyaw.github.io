@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Niki Yaw | Personal Website</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">Niki Yaw</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <!-- Left Panel -->
+    <aside class="left-panel">
+      <div class="profile">
+        <h1 class="name">Niki Yaw</h1>
+        <p class="location">Vancouver, British Columbia</p>
+      </div>
 
-  <main>
-    <section class="hero">
-      <h2>Hello 👋, I’m Niki</h2>
-      <p>Welcome to my personal website! I’m learning web development and building cool projects along the way.</p>
-      <a href="#projects" class="btn">See My Work</a>
-    </section>
+      <div class="nav">
+        <ul>
+          <li><a href="#me-today">me/today</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#notes">biweekly notes</a></li>
+          <li><a href="#connect">connect</a></li>
+        </ul>
+      </div>
 
-    <section id="about" class="section">
-      <h3>About Me</h3>
-      <p>I’m a data engineer pivoting into software engineering. This website is my journey and portfolio to share what I’ve learned and built.</p>
-    </section>
+      <!-- Floating vertical line -->
+      <div class="vertical-line"></div>
+    </aside>
 
-    <section id="projects" class="section">
-      <h3>Projects</h3>
-      <ul class="projects">
-        <li>🚀 Project 1 – Coming soon...</li>
-        <li>📊 Project 2 – Coming soon...</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section">
-      <h3>Contact</h3>
-      <p>Let’s connect! Reach me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Niki Yaw | Built with ❤️ and GitHub Pages</p>
-  </footer>
+    <!-- Right Panel (main content) -->
+    <main class="main-content">
+      <!-- placeholder for About, Projects, Notes, Connect -->
+    </main>
+  </div>
 </body>
 </html>
