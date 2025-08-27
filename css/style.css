@@ -79,7 +79,7 @@ body {
    Profile section (name + location)
    ========================================= */
 .profile {
-  margin-bottom: 3rem;         /* Space between profile and nav */
+  margin-bottom: 1.5rem;         /* Space between profile and nav */
   text-align: left;            /* Align text to left */
 }
 
@@ -138,13 +138,15 @@ body {
 .about-box {
   border: 2px solid #FF991C;   /* Orange outline */
   color: #fff;                 /* White text inside */
-  padding: 0.8rem 1rem;        /* Inner padding (tight around text) */
+  /*padding: 0.8rem 1rem;        /* Inner padding (tight around text) */
+  padding: 0.6rem 0.8rem;       /* Smaller inner padding so border hugs text */
   display: inline-block;       /* Shrink to fit text */
   border-radius: 6px;          /* Rounded corners */
   font-size: 0.8rem;           /* Smaller text */
   line-height: 1.4;            /* Line spacing */
   font-weight: 300;            /* Default thin text */
-  margin: 0;                   /* No extra margin (flex handles spacing) */
+  /*margin: 0;                   /* No extra margin (flex handles spacing) */
+  margin-top: -0.5rem;          /* Move the box slightly upward */
 }
 
 .about-box strong {
@@ -156,7 +158,7 @@ body {
    ========================================= */
 .contact {
   position: absolute;          /* Pin to bottom-right inside main content */
-  bottom: 1rem;                /* Slightly above bottom */
+  bottom: 0.5rem;                /* Slightly above bottom */
   right: 2rem;                 /* Distance from right edge */
   font-size: 0.8rem;           /* Small subtle text */
   font-weight: 300;            /* Thin font */
