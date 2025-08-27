@@ -155,15 +155,19 @@ body {
    About box (right content top section)
    ========================================= */
 .about-box {
-  border: 1px solid #FF991C;     /* Thin white outline */
-  color: #fff;                /* Keep text white */
-  padding: 0.75rem;            /* Space inside the box */
-  max-width: 650px;           /* Limit width so it doesn’t stretch too wide */
-  margin-bottom: 2rem;        /* Space below the box */
-  border-radius: 3px;         /* Slightly rounded corners (optional) */
+  border: 2px solid #FF991C;   /* Orange outline */
+  color: #fff;                 /* White text */
+  padding: 0.8rem 1rem;        /* Smaller inner spacing (top/bottom, left/right) */
+  display: inline-block;       /* Shrink to fit text */
+  margin: 0 auto 1.5rem auto;  /* Center horizontally with space below */
+  border-radius: 3px;          /* Rounded corners */
 }
 
 .about-box p {
-  font-size: 0.9rem;            /* Normal readable size */
-  line-height: 1.5;           /* Comfortable spacing between lines */
+  font-size: 0.8rem;            /* Normal readable size */
+  line-height: 1.4;           /* Comfortable spacing between lines */
+}
+
+.about-box strong {
+  font-weight: 700;            /* Bold highlight words */
 }
