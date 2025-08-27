@@ -1,88 +1,112 @@
-/* Import Google Font */
+/* =========================================
+   Import Google Font (Roboto Mono, thin)
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
-/* Reset */
+/* =========================================
+   Reset default browser styles
+   ========================================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;       /* remove default margins */
+  padding: 0;      /* remove default padding */
+  box-sizing: border-box; /* ensures padding/border don't break sizing */
 }
 
+/* =========================================
+   Body styling
+   ========================================= */
 body {
-  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif;
-  font-weight: 300; /* thin font */
-  background: #000;
-  color: #fff;
-  height: 100vh;
+  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif; /* main font stack */
+  font-weight: 300;  /* thin font for modern look */
+  background: #000;  /* full black background */
+  color: #fff;       /* white text color */
+  height: 100vh;     /* full viewport height */
+  display: flex;     /* enables flex for vertical centering if needed */
+  justify-content: center; /* center horizontally if needed */
+  align-items: center;     /* vertical centering of container */
 }
 
+/* =========================================
+   Container holding left panel and main content
+   ========================================= */
 .container {
-  display: flex;
-  height: 100vh;
+  display: flex;    /* horizontal layout: left panel + main content */
+  height: 100vh;    /* full viewport height */
 }
 
-/* Left Panel */
+/* =========================================
+   Left panel (sidebar)
+   ========================================= */
 .left-panel {
-  width: 250px; /* adjustable */
-  padding: 2rem; /* reduced to align with line */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
+  width: 250px;            /* fixed width for left panel */
+  padding: 0 2rem;         /* horizontal padding, no vertical padding */
+  display: flex;            /* flex layout inside panel */
+  flex-direction: column;   /* stack items vertically */
+  justify-content: center;  /* vertically center all content */
+  position: relative;       /* needed for absolute-positioned vertical line */
 }
 
-/* Profile (name + location) */
+/* =========================================
+   Profile section (name + location)
+   ========================================= */
 .profile {
-  margin-top: 2rem; /* aligns with vertical line top */
-  margin-bottom: 6rem; /* space before nav */
+  margin-bottom: 6rem; /* space between profile and nav */
+  text-align: left;     /* align text to the left */
 }
 
-.profile .name,
+.profile .name {
+  font-size: 1.2rem; /* slightly bigger than nav links */
+  font-weight: 300;  /* thin font */
+  line-height: 1.4;  /* spacing between name & location */
+}
+
 .profile .location {
-  font-size: 1rem; /* same as nav links */
+  font-size: 1rem;   /* same as nav links */
   font-weight: 300;
-  line-height: 1.4;
+  color: #aaa;       /* muted grey for location */
+  margin-top: 0.5rem; /* space between name and location */
 }
 
-.profile .location {
-  margin-top: 0.5rem;
-  color: #aaa;
-}
-
-/* Navigation */
+/* =========================================
+   Navigation menu
+   ========================================= */
 .nav ul {
-  list-style: none;
-  display: flex;
+  list-style: none;          /* remove bullets */
+  display: flex;             /* vertical stack */
   flex-direction: column;
-  gap: 2rem; /* space between nav items */
+  gap: 2rem;                 /* space between nav items */
 }
 
 .nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s;
+  color: #fff;               /* white nav links */
+  text-decoration: none;     /* remove underline */
+  font-weight: 300;          /* thin font */
+  font-size: 1rem;           /* consistent with location */
+  letter-spacing: 0.5px;     /* slight spacing for readability */
+  transition: color 0.3s;    /* smooth hover transition */
 }
 
 .nav a:hover {
-  color: #888;
+  color: #888;               /* slightly lighter grey on hover */
 }
 
-/* Floating vertical line */
+/* =========================================
+   Floating vertical partition line
+   ========================================= */
 .vertical-line {
-  width: 1px;
+  width: 1px;           /* thin line */
   background-color: #555; /* slightly lighter grey */
-  height: 70%; /* floating, not touching top/bottom */
-  position: absolute;
-  top: 2rem; /* aligns with name */
-  left: 100%;
-  transform: translateX(-50%);
+  height: 70%;          /* line floats, doesn't touch top/bottom */
+  position: absolute;    /* positioned relative to left-panel */
+  top: 15%;              /* distance from top of panel (adjustable) */
+  left: 100%;            /* line at right edge of panel */
+  transform: translateX(-50%); /* center line exactly at panel edge */
 }
 
-/* Main Content */
+/* =========================================
+   Main content area (right panel)
+   ========================================= */
 .main-content {
-  flex: 1;
-  padding: 2rem;
+  flex: 1;              /* take remaining width */
+  padding: 2rem;        /* spacing inside main content */
 }
