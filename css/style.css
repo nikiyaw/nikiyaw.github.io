@@ -72,7 +72,7 @@ body {
   top: 50%;                    /* Center vertically */
   transform: translateY(-50%); /* Shift upward by half its height */
   left: 100%;                  /* Right edge of left panel */
-  height: 60%;                 /* Line floats, not touching top/bottom */
+  height: 80%;                 /* Line floats, not touching top/bottom */
   width: 1px;                  /* Thin vertical line */
   background-color: #555;      /* Slightly lighter grey */
 }
