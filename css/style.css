@@ -1,30 +1,30 @@
 /* =========================================
-   Import Google Font (Roboto Mono, thin)
+   Import Google Font (Roboto Mono, light and bold)
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap'); 
-/* Added 700 weight for bold name */
+/* Using 300 for thin text and 700 for bold highlights */
 
 /* =========================================
    Reset default browser styles
    ========================================= */
 * {
-  margin: 0;                  /* Remove default browser margin */
-  padding: 0;                 /* Remove default browser padding */
-  box-sizing: border-box;     /* Makes width/height calculations predictable */
+  margin: 0;                  /* Remove default margin */
+  padding: 0;                 /* Remove default padding */
+  box-sizing: border-box;     /* Makes width/height predictable */
 }
 
 /* =========================================
    Body styling
    ========================================= */
 body {
-  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif; /* Thin, modern font stack */
-  font-weight: 300;            /* Light font for minimal look */
+  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif; /* Modern mono font stack */
+  font-weight: 300;            /* Default thin font weight */
   background: #000;            /* Full black background */
-  color: #fff;                 /* White text color */
+  color: #fff;                 /* White text */
   height: 100vh;               /* Full viewport height */
-  display: flex;               /* Enable flex layout for vertical stacking */
-  flex-direction: column;      /* Stack header / middle / footer vertically */
-  justify-content: flex-start; /* Start stacking from top */
+  display: flex;               /* Stack header, middle, footer vertically */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* =========================================
@@ -47,31 +47,32 @@ body {
    Middle section (main layout area)
    ========================================= */
 .middle {
-  flex: 4;                     /* Middle section taller than header/footer */
+  flex: 3;                     /* Taller middle section */
   display: flex;               /* Horizontal layout: left panel + right content */
-  position: relative;          /* Needed for absolute positioning of left panel elements like vertical line */
+  position: relative;          /* Needed for absolute positioning in child elements */
 }
 
 /* =========================================
    Left panel (sidebar)
    ========================================= */
 .left-panel {
-  width: 250px;                /* Fixed width */
+  width: 250px;                /* Fixed width for sidebar */
   display: flex;               /* Flex container for profile + nav */
   flex-direction: column;      /* Stack items vertically */
-  justify-content: flex-start; /* Align text near top of middle section */
+  justify-content: flex-start; /* Start from top */
   padding-left: 2rem;          /* Space from left edge */
-  position: relative;          /* Required for absolute vertical line */
+  position: relative;          /* Needed for vertical line */
 }
 
 /* =========================================
    Floating vertical partition line
    ========================================= */
 .vertical-line {
-  position: absolute;          /* Absolute inside left panel */
-  top: 0;                      /* Start at top of middle section */
-  bottom: 0;                   /* Extend to bottom of middle section */
-  left: 100%;                  /* Right edge of panel */
+  position: absolute;          /* Position relative to left panel */
+  top: 50%;                    /* Center vertically */
+  transform: translateY(-50%); /* Shift upward by half its height */
+  left: 100%;                  /* Right edge of left panel */
+  height: 60%;                 /* Line floats, not touching top/bottom */
   width: 1px;                  /* Thin vertical line */
   background-color: #555;      /* Slightly lighter grey */
 }
@@ -80,45 +81,45 @@ body {
    Profile section (name + location)
    ========================================= */
 .profile {
-  margin-bottom: 3rem;         /* More space between profile and nav section */
+  margin-bottom: 3rem;         /* Space between profile and nav */
   text-align: left;            /* Align text to left */
 }
 
 .profile .name {
-  font-size: 1.2rem;           /* Slightly larger than other text */
+  font-size: 1.5rem;           /* Slightly bigger than nav items */
   font-weight: 700;            /* Bold name */
-  margin-top: 1rem;            /* Push name slightly down from top of middle section */
+  margin-top: 1rem;            /* Push name slightly down from top */
 }
 
 .profile .location {
   font-size: 0.9rem;           /* Smaller font for location */
   font-weight: 300;            /* Thin font */
   color: #aaa;                 /* Muted grey */
-  margin-top: 0.8rem;          /* More space between name and location */
+  margin-top: 1rem;            /* Space below name */
 }
 
 /* =========================================
    Navigation menu
    ========================================= */
 .nav ul {
-  list-style: none;            /* Remove bullet points */
+  list-style: none;            /* Remove bullets */
   display: flex;               /* Flex container */
-  flex-direction: column;      /* Stack vertically */
-  gap: 1rem;                   /* Smaller space between nav links */
-  margin-top: 2rem;            /* Space between location and nav section */
+  flex-direction: column;      /* Stack links vertically */
+  gap: 0.5rem;                 /* Small gap between links */
+  margin-top: 2.5rem;          /* Space between location and nav links */
 }
 
 .nav a {
-  color: #fff;                 /* White text */
+  color: #fff;                 /* White links */
   text-decoration: none;       /* Remove underline */
-  font-size: 0.9rem;           /* Slightly smaller font for nav */
-  font-weight: 300;            /* Thin font */
-  letter-spacing: 0.5px;       /* Slight spacing for readability */
-  transition: color 0.3s;      /* Smooth hover effect */
+  font-size: 0.85rem;          /* Slightly smaller font */
+  font-weight: 300;            /* Thin font weight */
+  letter-spacing: 0.5px;       /* Spacing for readability */
+  transition: color 0.3s;      /* Smooth hover transition */
 }
 
 .nav a:hover {
-  color: #888;                 /* Lighter grey on hover */
+  color: #888;                 /* Slightly lighter grey on hover */
 }
 
 /* =========================================
@@ -126,48 +127,50 @@ body {
    ========================================= */
 .main-content {
   flex: 1;                     /* Take remaining width */
-  padding: 2rem;               /* Inner spacing */
+  padding: 2rem;               /* Side padding */
+  display: flex;               /* Make vertical flex container */
+  flex-direction: column;      /* Stack about box + other content + contact */
+  justify-content: space-between; /* Push about box to top and contact to bottom */
+  position: relative;          /* Needed for absolute contact positioning */
+}
+
+/* =========================================
+   About box (outlined orange rectangle)
+   ========================================= */
+.about-box {
+  border: 2px solid #FF991C;   /* Orange outline */
+  color: #fff;                 /* White text inside */
+  padding: 0.8rem 1rem;        /* Inner padding (closer to text) */
+  display: inline-block;       /* Shrink-wrap width to text */
+  border-radius: 6px;          /* Rounded corners */
+  font-size: 0.8rem;           /* Smaller text for minimal look */
+  line-height: 1.4;            /* Tight but readable line spacing */
+  font-weight: 300;            /* Default thin font */
+  margin: 0;                   /* No extra margin, spacing handled by flex */
+}
+
+.about-box strong {
+  font-weight: 700;            /* Bold certain words */
 }
 
 /* =========================================
    Contact section (bottom-right)
    ========================================= */
 .contact {
-  position: absolute;      /* Pin inside main-content */
-  bottom: 2rem;            /* Distance from bottom */
-  right: 2rem;             /* Distance from right edge */
-  font-size: 0.8rem;       /* Smaller, subtle font */
-  font-weight: 300;        /* Light font */
-  color: #aaa;             /* Muted grey */
+  position: absolute;          /* Pin inside main-content */
+  bottom: 1rem;                /* Slightly above bottom */
+  right: 2rem;                 /* Distance from right edge */
+  font-size: 0.8rem;           /* Small, subtle text */
+  font-weight: 300;            /* Thin font */
+  color: #aaa;                 /* Muted grey */
 }
 
 .contact a {
-  color: #fff;             /* White links */
-  text-decoration: none;   /* Remove underline */
-  transition: color 0.3s;  /* Smooth hover */
+  color: #fff;                 /* White links */
+  text-decoration: none;       /* Remove underline */
+  transition: color 0.3s;      /* Smooth hover effect */
 }
 
 .contact a:hover {
-  color: #888;             /* Slightly lighter on hover */
-}
-
-/* =========================================
-   About box (right content top section)
-   ========================================= */
-.about-box {
-  border: 1.5px solid #FF991C;   /* Orange outline */
-  color: #fff;                 /* White text */
-  padding: 0.8rem 1rem;        /* Smaller inner spacing (top/bottom, left/right) */
-  display: inline-block;       /* Shrink to fit text */
-  margin: 0 auto 1.5rem auto;  /* Center horizontally with space below */
-  border-radius: 3px;          /* Rounded corners */
-}
-
-.about-box p {
-  font-size: 0.8rem;            /* Normal readable size */
-  line-height: 1.4;           /* Comfortable spacing between lines */
-}
-
-.about-box strong {
-  font-weight: 700;            /* Bold highlight words */
+  color: #FF991C;              /* Orange accent on hover */
 }
