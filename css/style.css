@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  font-family: "Roboto Mono", "Inter", "Segoe UI", Roboto, sans-serif;
+  font-weight: 300; /* light font weight like ANDRS */
   background: #000;
   color: #fff;
   height: 100vh;
@@ -20,7 +21,7 @@ body {
 /* Left Panel */
 .left-panel {
   width: 250px; /* adjustable */
-  padding: 2rem;
+  padding: 4rem 2rem; /* move everything down */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -28,18 +29,17 @@ body {
 }
 
 .profile {
-  margin-bottom: 4rem; /* space before nav */
+  margin-bottom: 6rem; /* more space before nav */
 }
 
-.profile .name {
-  font-size: 1.5rem;
-  font-weight: 700;
+.profile .name,
+.profile .location {
+  font-size: 1rem; /* same as nav links */
+  font-weight: 300;
 }
 
 .profile .location {
-  font-size: 0.9rem;
-  font-weight: 400;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   color: #aaa;
 }
 
@@ -48,14 +48,15 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem; /* increase space between nav items */
 }
 
 .nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 300; /* light font weight */
   font-size: 1rem;
+  letter-spacing: 0.5px;
   transition: color 0.3s;
 }
 
@@ -66,11 +67,11 @@ body {
 /* Floating vertical line */
 .vertical-line {
   width: 1px;
-  background-color: #333; /* dark grey */
+  background-color: #555; /* lighter grey */
   height: 70%; /* not touching top/bottom */
   position: absolute;
-  top: 15%; /* adjust spacing from top */
-  left: 100%; /* line right at the edge of panel */
+  top: 15%;
+  left: 100%;
   transform: translateX(-50%);
 }
 
