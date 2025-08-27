@@ -157,10 +157,10 @@ body {
 .about-box {
   border: 1px solid #FF991C;     /* Thin white outline */
   color: #fff;                /* Keep text white */
-  padding: 1.5rem;            /* Space inside the box */
+  padding: 1rem;            /* Space inside the box */
   max-width: 600px;           /* Limit width so it doesn’t stretch too wide */
   margin-bottom: 2rem;        /* Space below the box */
-  border-radius: 6px;         /* Slightly rounded corners (optional) */
+  border-radius: 3px;         /* Slightly rounded corners (optional) */
 }
 
 .about-box p {
