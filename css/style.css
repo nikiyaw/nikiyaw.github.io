@@ -47,7 +47,7 @@ body {
    Middle section (main layout area)
    ========================================= */
 .middle {
-  flex: 3;                     /* Middle section taller than header/footer */
+  flex: 4;                     /* Middle section taller than header/footer */
   display: flex;               /* Horizontal layout: left panel + right content */
   position: relative;          /* Needed for absolute positioning of left panel elements like vertical line */
 }
@@ -155,7 +155,7 @@ body {
    About box (right content top section)
    ========================================= */
 .about-box {
-  border: 2px solid #FF991C;   /* Orange outline */
+  border: 1.5px solid #FF991C;   /* Orange outline */
   color: #fff;                 /* White text */
   padding: 0.8rem 1rem;        /* Smaller inner spacing (top/bottom, left/right) */
   display: inline-block;       /* Shrink to fit text */
