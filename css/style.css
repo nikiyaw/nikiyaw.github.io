@@ -68,13 +68,12 @@ body {
    Floating vertical partition line
    ========================================= */
 .vertical-line {
-  position: absolute;          /* Position relative to left panel */
-  top: 50%;                    /* Center vertically */
-  transform: translateY(-50%); /* Shift upward by half its height */
-  left: 100%;                  /* Right edge of left panel */
-  height: 80%;                 /* Line floats, not touching top/bottom */
-  width: 1px;                  /* Thin vertical line */
-  background-color: #555;      /* Slightly lighter grey */
+  position: absolute;  /* Position relative to left-panel */
+  top: 0;              /* Start at top of middle section */
+  bottom: 0;           /* Extend to bottom of middle section */
+  left: 100%;          /* Right edge of left panel */
+  width: 1px;          /* Thin line */
+  background-color: #555; /* Slightly lighter grey */
 }
 
 /* =========================================
