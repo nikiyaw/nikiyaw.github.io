@@ -1,3 +1,6 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
 /* Reset */
 * {
   margin: 0;
@@ -6,8 +9,8 @@
 }
 
 body {
-  font-family: "Roboto Mono", "Inter", "Segoe UI", Roboto, sans-serif;
-  font-weight: 300; /* light font weight like ANDRS */
+  font-family: 'Roboto Mono', 'Inter', 'Segoe UI', Roboto, sans-serif;
+  font-weight: 300; /* thin font */
   background: #000;
   color: #fff;
   height: 100vh;
@@ -21,21 +24,24 @@ body {
 /* Left Panel */
 .left-panel {
   width: 250px; /* adjustable */
-  padding: 4rem 2rem; /* move everything down */
+  padding: 2rem; /* reduced to align with line */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
 }
 
+/* Profile (name + location) */
 .profile {
-  margin-bottom: 6rem; /* more space before nav */
+  margin-top: 2rem; /* aligns with vertical line top */
+  margin-bottom: 6rem; /* space before nav */
 }
 
 .profile .name,
 .profile .location {
   font-size: 1rem; /* same as nav links */
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .profile .location {
@@ -48,13 +54,13 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* increase space between nav items */
+  gap: 2rem; /* space between nav items */
 }
 
 .nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: 300; /* light font weight */
+  font-weight: 300;
   font-size: 1rem;
   letter-spacing: 0.5px;
   transition: color 0.3s;
@@ -67,10 +73,10 @@ body {
 /* Floating vertical line */
 .vertical-line {
   width: 1px;
-  background-color: #555; /* lighter grey */
-  height: 70%; /* not touching top/bottom */
+  background-color: #555; /* slightly lighter grey */
+  height: 70%; /* floating, not touching top/bottom */
   position: absolute;
-  top: 15%;
+  top: 2rem; /* aligns with name */
   left: 100%;
   transform: translateX(-50%);
 }
