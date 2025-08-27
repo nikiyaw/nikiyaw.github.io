@@ -128,3 +128,25 @@ body {
   flex: 1;                     /* Take remaining width */
   padding: 2rem;               /* Inner spacing */
 }
+
+/* =========================================
+   Contact section (bottom-right)
+   ========================================= */
+.contact {
+  position: absolute;      /* Pin inside main-content */
+  bottom: 2rem;            /* Distance from bottom */
+  right: 2rem;             /* Distance from right edge */
+  font-size: 0.8rem;       /* Smaller, subtle font */
+  font-weight: 300;        /* Light font */
+  color: #aaa;             /* Muted grey */
+}
+
+.contact a {
+  color: #fff;             /* White links */
+  text-decoration: none;   /* Remove underline */
+  transition: color 0.3s;  /* Smooth hover */
+}
+
+.contact a:hover {
+  color: #888;             /* Slightly lighter on hover */
+}
