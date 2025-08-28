@@ -19,6 +19,8 @@ body {
     color: #fff;
     /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
+    /* Arranges all children of the body in a column. */
+    flex-direction: column;
 }
 
 /*
@@ -35,8 +37,8 @@ main {
     max-width: 600px;
     /* Adds padding on the sides for smaller screens. */
     padding: 0 20px;
-    /* Removes any default margin on the main tag. */
-    margin: 0;
+    /* Adds some space between sections. */
+    margin: 40px 0;
 }
 
 /*
@@ -51,6 +53,16 @@ header {
 }
 
 /*
+ * SECTION STYLES
+ */
+section {
+    /* Centers the content within each section. */
+    text-align: center;
+    /* Adds some space between sections. */
+    margin-bottom: 40px;
+}
+
+/*
  * TYPOGRAPHY STYLES
  * These rules control the font sizes and colors.
  */
@@ -61,6 +73,15 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    /* Sets a font size for section headings. */
+    font-size: 20px;
+    /* Sets the color for the headings. */
+    color: #fff;
+    /* Adds space below the heading. */
+    margin-bottom: 10px;
+}
+
 p {
     /* Sets the font size for the paragraph text. */
     font-size: 16px;
@@ -68,6 +89,8 @@ p {
     color: #A0A0A0;
     /* Centers the paragraph text. */
     text-align: center;
+    /* Adds some space below the paragraph. */
+    margin-bottom: 20px;
 }
 
 strong {
@@ -75,13 +98,24 @@ strong {
     color: #C0C0C0;
 }
 
-nav {
-    /* Adds a margin to push the nav down from the text. */
-    margin-top: 20px;
+/*
+ * JOB MESSAGE STYLES
+ */
+.job-message {
+    /* Centers the message. */
+    text-align: center;
+    /* Adds a 1px solid orange border around the container. */
+    border: 1px solid #FF991C;
+    /* Adds padding inside the box for spacing between the border and the text. */
+    padding: 12px;
+    /* Rounds the corners of the border by 8 pixels. */
+    border-radius: 8px;
+    /* Adds margin to the bottom to separate it from the next section. */
+    margin-bottom: 40px;
 }
 
 /*
- * NAVIGATION STYLES
+ * NAVIGATION AND LIST STYLES
  */
 ul {
     /* Removes bullet points from the list. */
@@ -103,4 +137,26 @@ a {
     color: #fff;
     /* Removes the default underline from links. */
     text-decoration: none;
+}
+
+/*
+ * FOOTER STYLES
+ */
+footer {
+    /* Adds some top margin to separate it from the last section. */
+    margin-top: 40px;
+    /* Centers the footer content. */
+    text-align: center;
+}
+
+.footer-text {
+    /* Sets a smaller font size for the footer text. */
+    font-size: 12px;
+    /* Sets a lighter color for the footer text. */
+    color: #A0A0A0;
+}
+
+.footer-text a {
+    /* Makes sure footer links are the same color as the text. */
+    color: #A0A0A0;
 }
