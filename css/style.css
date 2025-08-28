@@ -114,6 +114,11 @@ main {
     font-size: 16px;
 }
 
+.left-panel h1 {
+    /* Sets the font size for your name to be slightly larger than the rest. */
+    font-size: 20px;
+}
+
 /*
  * PARTITION LINE STYLES
  * These rules create the "floating" vertical line.
