@@ -56,6 +56,19 @@ main {
 }
 
 /*
+ * LEFT PANEL CONTENT POSITIONING
+ * These rules add specific margins to position the header and nav.
+ */
+.left-panel header {
+    /* Adds a margin to the bottom of the header to push the nav away. */
+    margin-bottom: 200px;
+}
+.left-panel nav {
+    /* Adds a margin to the top of the nav to push it down. */
+    margin-top: 200px;
+}
+
+/*
  * NAVIGATION LINK STYLES
  * These rules target the specific anchor links within the left panel.
  */
