@@ -5,6 +5,8 @@
 body {
     /* Sets the background color of the entire webpage to black. */
     background-color: #000;
+    /* Sets the default font for the entire page */
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 /* * LAYOUT STYLES
