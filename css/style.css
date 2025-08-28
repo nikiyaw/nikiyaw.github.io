@@ -34,7 +34,7 @@ main {
  */
 h2 {
     /* Sets the font size for subheadings. */
-    font-size: 12px;
+    font-size: 14px;
     /* Sets the color for the subheadings to white. */
     color: #fff;
     /* Adds some space below the subheading. */
@@ -42,7 +42,7 @@ h2 {
 }
 
 p {
-    font-size: 12px;
+    font-size: 14px;
     color: #A0A0A0;
     line-height: 1.5;
     margin-top: -10px;
@@ -92,12 +92,14 @@ li {
     /* Adds a 1px solid white line to the bottom of each list item. */
     border-bottom: 1px solid #fff;
     /* Adds some internal padding to space the text from the line. */
-    padding-bottom: 5px;
+    padding-bottom: 0;
 }
 
 a {
-    /* Sets the link color to white. */
-    color: #fff;
+    /* Sets the link color to match the paragraph text color. */
+    color: #A0A0A0;
+    /* Sets the font size of the link to match the paragraph text. */
+    font-size: 14px;
     /* Removes the default underline from links. */
     text-decoration: none;
 }
@@ -112,7 +114,7 @@ footer {
 
 .footer-text {
     /* Sets a smaller font size for the footer text. */
-    font-size: 12px;
+    font-size: 14px;
     /* Sets a lighter color for the footer text. */
     color: #A0A0A0;
 }
