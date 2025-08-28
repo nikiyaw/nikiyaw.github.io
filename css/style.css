@@ -7,6 +7,12 @@ body {
     background-color: #000;
     /* Sets the default font for the entire page */
     font-family: 'IBM Plex Mono', monospace;
+    /* Makes the body a Flexbox container. */
+    display: flex;
+    /* Aligns content to the start of the container (top left). */
+    justify-content: flex-start;
+    /* Prevents horizontal scrolling from transformed or overflowing content. */
+    overflow-x: hidden;
 }
 
 /* * LAYOUT STYLES
@@ -167,6 +173,8 @@ main {
     /*flex: 1 1 auto;
     /* Adds top and left padding to align with the left panel's content. */
     padding: 160px 40px 0 40px; /* top right bottom left */
+    /* Tells the element to take up all remaining space. */
+    flex: 1;
     /* Prevents the content area from shrinking below 200 pixels wide. */
     min-width: 200px;
 }
