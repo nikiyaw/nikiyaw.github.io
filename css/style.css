@@ -1,189 +1,106 @@
 /*
  * GENERAL STYLES
- * These rules apply to the entire page.
+ * These rules apply to the entire page and set up the new single-column layout.
  */
 body {
     /* Sets the background color of the entire webpage to black. */
     background-color: #000;
     /* Sets the default font for the entire page */
     font-family: 'IBM Plex Mono', monospace;
-    /* Makes the body a Flexbox container. */
+    /* This makes the body a Flexbox container. */
     display: flex;
-    /* Aligns content to the start of the container (top left). */
-    justify-content: flex-start;
-    /* Prevents horizontal scrolling from transformed or overflowing content. */
-    overflow-x: hidden;
-    /* Removes default margins from the body */
+    /* Aligns all content to the center horizontally. */
+    justify-content: center;
+    /* Aligns all content to the center vertically. */
+    align-items: center;
+    /* Sets the height of the body to the full viewport height. */
+    min-height: 100vh;
+    /* Sets the text color for the entire page to white by default. */
+    color: #fff;
+    /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
 }
 
-/* * LAYOUT STYLES
- * These rules establish the main two-column layout using Flexbox.
+/*
+ * MAIN CONTAINER STYLES
+ * These rules style the main content area.
  */
 main {
-    /*
-     * Ensures the main container is at least the height of the viewport.
-     * This prevents content from falling off the page.
-     */
-    min-height: 100vh;
-    /*
-     * Enables Flexbox on the <main> element, arranging its children
-     * (.left-panel and .main-content) horizontally in a row by default.
-     */
+    /* Aligns children in a column. */
     display: flex;
-    /* Allows flex items to wrap to a new line when the container shrinks. */
-    flex-wrap: wrap;
-}
-
-/*
- * LEFT PANEL STYLES
- * These rules style the left-hand navigation and content panel.
- */
-.left-panel {
-    /* Sets the width of the left panel to 200 pixels. */
-    width: 200px;
-    /* Sets the height to fill the parent container. */
-    height: 100%;
-    /* Sets the default text color for all content inside the panel to white. */
-    color: #fff;
-    /* Sets padding for the left panel. */
-    padding: 160px 20px 150px 30px; /* top right bottom left */
-    /* Changes how the box model works. Padding and borders are now
-     * included inside the element's width and height. */
-    box-sizing: border-box;
-    /* Activates Flexbox on the left panel itself. */
-    display: flex;
-    /* Changes the main axis of the Flexbox container to a column. */
     flex-direction: column;
-    /* Aligns all children to the start (top) of the flex container. */
-    justify-content: flex-start;
-}
-
-/*
- * NAVIGATION POSITIONING
- * This rule positions the nav buttons relative to the header.
- */
-.left-panel nav {
-    /* Adds a margin to the top of the nav to push it down from the header. */
-    margin-top: 150px; /* Adjust this value to get the exact positioning you want. */
-}
-
-/*
- * NAVIGATION LINK STYLES
- * These rules target the specific anchor links within the left panel.
- */
-.left-panel a {
-    /* Overrides the browser's default link color and sets it to white. */
-    color: #fff;
-    /* Removes the default underline from the navigation links. */
-    text-decoration: none;
-}
-
-/*
- * NAVIGATION LIST STYLES
- * These rules target the <ul> element that contains the navigation links.
- */
-.left-panel ul {
-    /* Removes the bullet points from the list. */
-    list-style-type: none;
-    /* Resets the default browser margin for the list. */
+    /* Centers the content within the column. */
+    align-items: center;
+    /* Constrains the max width to ensure it doesn't get too wide on large screens. */
+    max-width: 600px;
+    /* Adds padding on the sides for smaller screens. */
+    padding: 0 20px;
+    /* Removes any default margin on the main tag. */
     margin: 0;
-    /* Resets the default browser padding for the list. */
+}
+
+/*
+ * HEADER STYLES
+ */
+header {
+    /* Aligns children in a column. */
+    display: flex;
+    flex-direction: column;
+    /* Centers the content within the column. */
+    align-items: center;
+}
+
+/*
+ * TYPOGRAPHY STYLES
+ * These rules control the font sizes and colors.
+ */
+h1 {
+    /* Sets a slightly larger font size for the name. */
+    font-size: 24px;
+    /* Removes any default margin on the h1 tag. */
+    margin: 0;
+}
+
+p {
+    /* Sets the font size for the paragraph text. */
+    font-size: 16px;
+    /* Sets the color for the paragraph text. */
+    color: #A0A0A0;
+    /* Centers the paragraph text. */
+    text-align: center;
+}
+
+strong {
+    /* Makes sure the bolded text has a specific color. */
+    color: #C0C0C0;
+}
+
+nav {
+    /* Adds a margin to push the nav down from the text. */
+    margin-top: 20px;
+}
+
+/*
+ * NAVIGATION STYLES
+ */
+ul {
+    /* Removes bullet points from the list. */
+    list-style-type: none;
+    /* Resets default margins and padding. */
+    margin: 0;
     padding: 0;
 }
 
-/*
- * NAVIGATION LIST ITEM STYLES
- * These rules target the individual list items (<li>) within the navigation.
- */
-.left-panel li {
-    /* Adds a 15-pixel space to the bottom of each list item. */
+li {
+    /* Adds space below each list item. */
     margin-bottom: 10px;
-}
-
-.left-panel h1, .left-panel p {
-    margin: 0;
-}
-
-/*
- * FONT STYLES
- * These rules control the font sizes and weights for the left panel.
- */
-.left-panel h1 {
-    /* Sets the font size for your name to be slightly larger than the rest. */
-    font-size: 16px;
-    /* Sets the name color to white, overriding the inherited color. */
-    color: #fff;
-}
-
-.left-panel p {
-    /* Sets the font size for the location to 14 pixels. */
-    font-size: 14px;
-    /* Sets the location text color to a dark gray. */
-    color: #A0A0A0;
-}
-
-.left-panel a {
-    /* Sets the font size for the navigation links to 14 pixels. */
-    font-size: 14px;
-    /* Sets the navigation links to a lighter gray. */
-    color: #C0C0C0;
-    text-decoration: none;
-}
-
-/*
- * PARTITION LINE STYLES
- * These rules create the "floating" vertical line.
- */
-.partition-line {
-    /* Sets the color of the line to white. */
-    background-color: #fff;
-    /* Makes the line 1 pixel wide. */
-    width: 1px;
-    /* Ensures the partition line fills the height of the main container. */
-    height: 100%;
-    /* Adds a margin to the top and bottom of the line. */
-    margin: 150px 0;
-}
-
-/*
- * MAIN CONTENT STYLES
- * These rules style the right-hand content area.
- */
-.main-content {
-    /* Adds top and left padding to align with the left panel's content. */
-    padding: 160px 40px 0 40px; /* top right bottom left */
-    /* Tells the element to take up all remaining space. */
-    flex: 1;
-    /* Prevents the content area from shrinking below 200 pixels wide. */
-    min-width: 200px;
-}
-
-/*
- * JOB MESSAGE STYLES
- * These rules style the text message and its orange outline.
- */
-.job-message {
-    /* Sets a 1px solid orange border around the container. */
-    border: 1px solid #FF991C;
-    /* Adds padding inside the box for spacing between the border and the text. */
-    padding: 12px;
-    /* Rounds the corners of the border by 5 pixels. */
-    border-radius: 8px;
-}
-
-.job-message p {
-    /* Sets the color of the text to a light gray, matching the nav buttons. */
-    color: #C0C0C0;
-    /* Aligns the text to the center. */
+    /* Centers the list item text. */
     text-align: center;
-    /* Removes the default margin on the paragraph tag. */
-    margin: 0;
-    /* Allows long words to break and wrap to the next line. */
-    word-wrap: break-word;
 }
 
-.job-message strong {
-    /* Ensures the bolded text is the same color as the rest of the message. */
-    color: #C0C0C0;
+a {
+    /* Overrides the browser's default link color and sets it to white. */
+    color: #fff;
+    /* Removes the default underline from links. */
+    text-decoration: none;
 }
