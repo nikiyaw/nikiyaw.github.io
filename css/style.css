@@ -67,6 +67,19 @@ main {
 }
 
 /*
+ * NAVIGATION LIST STYLES
+ * These rules target the <ul> element that contains the navigation links.
+ */
+.left-panel ul {
+    /* Removes the bullet points from the list. */
+    list-style-type: none;
+    /* Resets the default browser margin for the list. */
+    margin: 0;
+    /* Resets the default browser padding for the list. */
+    padding: 0;
+}
+
+/*
  * PARTITION LINE STYLES
  * These rules create the "floating" vertical line.
  */
