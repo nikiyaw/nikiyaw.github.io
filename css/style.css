@@ -116,7 +116,18 @@ main {
 
 .left-panel h1 {
     /* Sets the font size for your name to be slightly larger than the rest. */
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.left-panel p {
+    /* Sets the location text color to a dark gray. */
+    color: #A0A0A0;
+}
+
+.left-panel a {
+    /* Sets the navigation links to a lighter gray. */
+    color: #C0C0C0;
+    text-decoration: none;
 }
 
 /*
