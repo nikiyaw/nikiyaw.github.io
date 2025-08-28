@@ -32,7 +32,7 @@ main {
     /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
     /* Adds 40 pixels of space (padding) inside the panel on all sides. */
-    padding: 40px;
+    padding: 20px;
     /*
      * Changes how the box model works. Padding and borders are now
      * included inside the element's width and height, preventing
