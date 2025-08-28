@@ -152,3 +152,28 @@ main {
      */
     margin: 150px 0;
 }
+
+/*
+ * MAIN CONTENT STYLES
+ * These rules style the right-hand content area.
+ */
+.main-content {
+    /* Enables Flexbox on the main content container. */
+    display: flex;
+    /* Aligns the content to the top of the container. */
+    align-items: flex-start;
+    /* Adds top and left padding to align with the left panel's content. */
+    padding: 160px 40px 0 40px;
+    flex: 1 0 auto;
+}
+
+/*
+ * JOB MESSAGE STYLES
+ * These rules style the text message and its orange outline.
+ */
+.job-message {
+    /* Sets a 1px solid orange border around the container. */
+    border: 1px solid #FF991C; 
+    /* Adds padding inside the box for spacing between the border and the text. */
+    padding: 15px;
+}
