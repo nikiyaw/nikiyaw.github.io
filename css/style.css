@@ -39,8 +39,9 @@ main {
     /*min-width: 170px;
     /* Sets the width of the left panel to 200 pixels to create more space on the left. */
     width: 200px;
-    /* Sets the height of the panel to fill the entire browser window height. */
-    height: 100vh;
+    /* Sets the minimum height of the panel to fill the viewport, but allows it to shrink. */
+    min-height: 100vh;
+    /*height: 100vh;
     /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
     /* Sets padding for the left panel. The top and bottom padding
@@ -152,7 +153,8 @@ main {
      * Calculates the height to be 100% of the viewport height minus
      * 300 pixels (150px for top and 150px for bottom), creating a "floating" effect.
      */
-    height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
+    /*height: calc(100vh - 300px);
     /*
      * Adds a 150px margin to the top and bottom of the line,
      * and 0px margin to the left and right, to push it away from
