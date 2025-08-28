@@ -31,8 +31,8 @@ main {
     height: 100vh;
     /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
-    /* Adds 40 pixels of space (padding) inside the panel on all sides. */
-    padding: 20px;
+    /* Adds 30 pixels of space (padding) inside the panel on all sides. */
+    padding: 30px;
     /*
      * Changes how the box model works. Padding and borders are now
      * included inside the element's width and height, preventing
@@ -84,8 +84,8 @@ main {
  * These rules target the individual list items (<li>) within the navigation.
  */
 .left-panel li {
-    /* Adds a 20-pixel space to the bottom of each list item. */
-    margin-bottom: 20px;
+    /* Adds a 15-pixel space to the bottom of each list item. */
+    margin-bottom: 15px;
 }
 
 /*
