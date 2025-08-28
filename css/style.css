@@ -106,6 +106,15 @@ main {
 }
 
 /*
+ * FONT STYLES
+ * These rules control the font sizes and weights for the left panel.
+ */
+.left-panel p, .left-panel a {
+    /* Sets the font size for the location and navigation links to 16 pixels. */
+    font-size: 16px;
+}
+
+/*
  * PARTITION LINE STYLES
  * These rules create the "floating" vertical line.
  */
