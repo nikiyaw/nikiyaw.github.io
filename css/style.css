@@ -189,6 +189,8 @@ main {
     text-align: center;
     /* Removes the default margin on the paragraph tag. */
     margin: 0;
+    /* Allows long words to break and wrap to the next line. */
+    word-wrap: break-word;
 }
 
 .job-message strong {
