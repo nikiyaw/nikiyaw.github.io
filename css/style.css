@@ -32,13 +32,6 @@ main {
  * TYPOGRAPHY AND SECTION STYLES
  * These rules control the look of the individual elements within the block.
  */
-h1 {
-    /* Sets the font size for the main heading (your name). */
-    font-size: 14px;
-    /* Removes any default margin on the heading. */
-    margin: 0;
-}
-
 h2 {
     /* Sets the font size for subheadings. */
     font-size: 12px;
@@ -49,12 +42,11 @@ h2 {
 }
 
 p {
-    /* Sets the font size for paragraph text. */
     font-size: 12px;
-    /* Sets the color for the paragraph text to a dark gray. */
     color: #A0A0A0;
-    /* Increases the space between lines of text for readability. */
     line-height: 1.5;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
 strong {
