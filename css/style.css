@@ -12,6 +12,11 @@ main {
     color: #fff;
     padding: 40px;
     box-sizing: border-box;
+
+    /* New Flexbox properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .left-panel a {
