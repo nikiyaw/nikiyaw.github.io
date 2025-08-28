@@ -7,6 +7,8 @@ body {
     background-color: #000;
     /* Sets the default font for the entire page */
     font-family: 'IBM Plex Mono', monospace;
+    /* Prevents horizontal scrolling from transformed content. */
+    overflow-x: hidden;
 }
 
 /* * LAYOUT STYLES
@@ -50,7 +52,7 @@ main {
      * stacking its children (<header> and <nav>) vertically.
      */
     flex-direction: column;
-    
+
     /* Aligns all children to the start (top) of the flex container. */
     justify-content: flex-start;
 
