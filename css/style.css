@@ -1,141 +1,89 @@
 /*
  * GENERAL STYLES
- * These rules apply to the entire page and set up the new single-column layout.
+ * These rules apply to the entire page.
  */
 body {
     /* Sets the background color of the entire webpage to black. */
     background-color: #000;
     /* Sets the default font for the entire page */
     font-family: 'IBM Plex Mono', monospace;
-    /* This makes the body a Flexbox container. */
-    display: flex;
-    /* Aligns all content to the center horizontally. */
-    justify-content: center;
-    /* Aligns all content to the center vertically. */
-    align-items: center;
-    /* Sets the height of the body to the full viewport height. */
-    min-height: 100vh;
-    /* Sets the text color for the entire page to white by default. */
+    /* Sets the text color to white by default. */
     color: #fff;
+    /* Sets the body to have a min-height of 100vh. */
+    min-height: 100vh;
     /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
-    /* Arranges all children of the body in a column. */
-    flex-direction: column;
 }
 
 /*
  * MAIN CONTAINER STYLES
- * These rules style the main content area.
+ * This rule creates the "centered block" look.
  */
 main {
-    /* Aligns children in a column. */
-    display: flex;
-    flex-direction: column;
-    /* Centers the content within the column. */
-    align-items: center;
-    /* Constrains the max width to ensure it doesn't get too wide on large screens. */
+    /* Sets the maximum width of the content block to 600px. */
     max-width: 600px;
-    /* Adds padding on the sides for smaller screens. */
-    padding: 0 20px;
-    /* Adds some space between sections. */
-    margin: 40px 0;
+    /* Centers the block on the page by setting the left and right margins to auto. */
+    margin: 0 auto;
+    /* Adds padding to the top and bottom, and sides for smaller screens. */
+    padding: 80px 20px;
 }
 
 /*
- * HEADER STYLES
- */
-header {
-    /* Aligns children in a column. */
-    display: flex;
-    flex-direction: column;
-    /* Centers the content within the column. */
-    align-items: center;
-}
-
-/*
- * SECTION STYLES
- */
-section {
-    /* Centers the content within each section. */
-    text-align: center;
-    /* Adds some space between sections. */
-    margin-bottom: 40px;
-}
-
-/*
- * TYPOGRAPHY STYLES
- * These rules control the font sizes and colors.
+ * TYPOGRAPHY AND SECTION STYLES
+ * These rules control the look of the individual elements within the block.
  */
 h1 {
-    /* Sets a slightly larger font size for the name. */
     font-size: 24px;
-    /* Removes any default margin on the h1 tag. */
     margin: 0;
+    text-align: center;
 }
 
 h2 {
-    /* Sets a font size for section headings. */
     font-size: 20px;
-    /* Sets the color for the headings. */
     color: #fff;
-    /* Adds space below the heading. */
     margin-bottom: 10px;
 }
 
 p {
-    /* Sets the font size for the paragraph text. */
     font-size: 16px;
-    /* Sets the color for the paragraph text. */
     color: #A0A0A0;
-    /* Centers the paragraph text. */
-    text-align: center;
-    /* Adds some space below the paragraph. */
-    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 strong {
-    /* Makes sure the bolded text has a specific color. */
     color: #C0C0C0;
+}
+
+section {
+    margin-bottom: 40px;
 }
 
 /*
  * JOB MESSAGE STYLES
  */
 .job-message {
-    /* Centers the message. */
-    text-align: center;
-    /* Adds a 1px solid orange border around the container. */
     border: 1px solid #FF991C;
-    /* Adds padding inside the box for spacing between the border and the text. */
     padding: 12px;
-    /* Rounds the corners of the border by 8 pixels. */
     border-radius: 8px;
-    /* Adds margin to the bottom to separate it from the next section. */
-    margin-bottom: 40px;
+    margin: 40px 0;
+    text-align: center;
 }
 
 /*
- * NAVIGATION AND LIST STYLES
+ * LIST AND LINK STYLES
  */
 ul {
-    /* Removes bullet points from the list. */
     list-style-type: none;
-    /* Resets default margins and padding. */
     margin: 0;
     padding: 0;
 }
 
 li {
-    /* Adds space below each list item. */
     margin-bottom: 10px;
-    /* Centers the list item text. */
-    text-align: center;
 }
 
 a {
-    /* Overrides the browser's default link color and sets it to white. */
     color: #fff;
-    /* Removes the default underline from links. */
     text-decoration: none;
 }
 
@@ -143,20 +91,15 @@ a {
  * FOOTER STYLES
  */
 footer {
-    /* Adds some top margin to separate it from the last section. */
     margin-top: 40px;
-    /* Centers the footer content. */
     text-align: center;
 }
 
 .footer-text {
-    /* Sets a smaller font size for the footer text. */
     font-size: 12px;
-    /* Sets a lighter color for the footer text. */
     color: #A0A0A0;
 }
 
 .footer-text a {
-    /* Makes sure footer links are the same color as the text. */
     color: #A0A0A0;
 }
