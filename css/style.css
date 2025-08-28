@@ -20,8 +20,6 @@ main {
     display: flex;
     /* Positions the main container relative to the viewport. */
     position: absolute;
-    /* Pushes the container to the left by 50 pixels from the viewport's left edge. */
-    left: -50px;
 }
 
 /*
