@@ -61,11 +61,11 @@ main {
  */
 .left-panel header {
     /* Adds a margin to the bottom of the header to push the nav away. */
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
-.left-panel nav {
+/*.left-panel nav {
     /* Adds a margin to the top of the nav to push it down. */
-    margin-top: 200px;
+    /*margin-top: 200px;
 }
 
 /*
