@@ -47,12 +47,12 @@ main {
      * stacking its children (<header> and <nav>) vertically.
      */
     flex-direction: column;
-    /*
-     * Distributes the children of the Flexbox container
-     * (the header and the nav) with space between them.
-     * The first item goes to the top, the last to the bottom.
-     */
-    justify-content: space-between;
+    /* 
+    /* Changes from space-between to center.
+    /* This will center the children (header and nav) along the vertical axis.
+    /* It will also create equal space above the header and below the nav.
+    */
+    justify-content: center;
 }
 
 /*
