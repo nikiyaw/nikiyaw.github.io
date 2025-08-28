@@ -88,6 +88,10 @@ main {
     margin-bottom: 15px;
 }
 
+.left-panel h1, .left-panel p {
+    margin: 0;
+}
+
 /*
  * PARTITION LINE STYLES
  * These rules create the "floating" vertical line.
