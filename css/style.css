@@ -99,9 +99,9 @@ main {
     width: 1px;
     /*
      * Calculates the height to be 100% of the viewport height minus
-     * 160 pixels (80px for top and 80px for bottom), creating a "floating" effect.
+     * 300 pixels (150px for top and 150px for bottom), creating a "floating" effect.
      */
-    height: calc(100vh - 160px);
+    height: calc(100vh - 300px);
     /*
      * Adds a 80px margin to the top and bottom of the line,
      * and 0px margin to the left and right, to push it away from
