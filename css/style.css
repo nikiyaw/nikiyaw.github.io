@@ -23,3 +23,10 @@ main {
     color: #fff;
     text-decoration: none;
 }
+
+.partition-line {
+    background-color: #fff;
+    width: 1px;
+    height: calc(100vh - 80px); /* 100vh minus some space for top and bottom */
+    margin: 40px 0; /* Creates space above and below the line */
+}
