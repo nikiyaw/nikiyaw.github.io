@@ -1,32 +1,87 @@
+/*
+ * GENERAL STYLES
+ * These rules apply to the entire page.
+ */
 body {
+    /* Sets the background color of the entire webpage to black. */
     background-color: #000;
 }
 
+/* * LAYOUT STYLES
+ * These rules establish the main two-column layout using Flexbox.
+ */
 main {
+    /*
+     * Enables Flexbox on the <main> element, arranging its children
+     * (.left-panel and .main-content) horizontally in a row by default.
+     */
     display: flex;
 }
 
+/*
+ * LEFT PANEL STYLES
+ * These rules style the left-hand navigation and content panel.
+ */
 .left-panel {
+    /* Ensures the panel is at least 300 pixels wide. */
     min-width: 300px;
+    /* Sets the height of the panel to fill the entire browser window height. */
     height: 100vh;
+    /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
+    /* Adds 40 pixels of space (padding) inside the panel on all sides. */
     padding: 40px;
+    /*
+     * Changes how the box model works. Padding and borders are now
+     * included inside the element's width and height, preventing
+     * unwanted resizing.
+     */
     box-sizing: border-box;
 
-    /* New Flexbox properties */
+    /* Activates Flexbox on the left panel itself. */
     display: flex;
+    /*
+     * Changes the main axis of the Flexbox container to a column,
+     * stacking its children (<header> and <nav>) vertically.
+     */
     flex-direction: column;
+    /*
+     * Distributes the children of the Flexbox container
+     * (the header and the nav) with space between them.
+     * The first item goes to the top, the last to the bottom.
+     */
     justify-content: space-between;
 }
 
+/*
+ * NAVIGATION LINK STYLES
+ * These rules target the specific anchor links within the left panel.
+ */
 .left-panel a {
+    /* Overrides the browser's default link color and sets it to white. */
     color: #fff;
+    /* Removes the default underline from the navigation links. */
     text-decoration: none;
 }
 
+/*
+ * PARTITION LINE STYLES
+ * These rules create the "floating" vertical line.
+ */
 .partition-line {
+    /* Sets the color of the line to white. */
     background-color: #fff;
+    /* Makes the line 1 pixel wide. */
     width: 1px;
-    height: calc(100vh - 80px); /* 100vh minus some space for top and bottom */
-    margin: 40px 0; /* Creates space above and below the line */
+    /*
+     * Calculates the height to be 100% of the viewport height minus
+     * 80 pixels (40px for top and 40px for bottom), creating a "floating" effect.
+     */
+    height: calc(100vh - 80px);
+    /*
+     * Adds a 40px margin to the top and bottom of the line,
+     * and 0px margin to the left and right, to push it away from
+     * its neighboring elements.
+     */
+    margin: 40px 0;
 }
