@@ -44,13 +44,18 @@ main {
 
     /* Activates Flexbox on the left panel itself. */
     display: flex;
+
     /*
      * Changes the main axis of the Flexbox container to a column,
      * stacking its children (<header> and <nav>) vertically.
      */
     flex-direction: column;
+    
     /* Aligns all children to the start (top) of the flex container. */
     justify-content: flex-start;
+
+    /* Moves the panel 50 pixels to the left without affecting the layout flow. */
+    transform: translateX(-50px);
 }
 
 /*
