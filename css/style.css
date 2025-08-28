@@ -5,11 +5,11 @@
 body {
     /* Sets the background color of the entire webpage to black. */
     background-color: #000;
-    /* Sets the default font for the entire page */
+    /* Sets the default font for the entire page. */
     font-family: 'IBM Plex Mono', monospace;
     /* Sets the text color to white by default. */
     color: #fff;
-    /* Sets the body to have a min-height of 100vh. */
+    /* Sets the body to have a minimum height of 100% of the viewport height. */
     min-height: 100vh;
     /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
@@ -20,8 +20,8 @@ body {
  * This rule creates the "centered block" look.
  */
 main {
-    /* Sets the maximum width of the content block to 600px. */
-    max-width: 600px;
+    /* Sets the maximum width of the content block to 1000 pixels. */
+    max-width: 1000px;
     /* Centers the block on the page by setting the left and right margins to auto. */
     margin: 0 auto;
     /* Adds padding to the top and bottom, and sides for smaller screens. */
@@ -33,27 +33,37 @@ main {
  * These rules control the look of the individual elements within the block.
  */
 h1 {
-    font-size: 18px;
+    /* Sets the font size for the main heading (your name). */
+    font-size: 14px;
+    /* Removes any default margin on the heading. */
     margin: 0;
 }
 
 h2 {
-    font-size: 16px;
+    /* Sets the font size for subheadings. */
+    font-size: 12px;
+    /* Sets the color for the subheadings to white. */
     color: #fff;
+    /* Adds some space below the subheading. */
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 16px;
+    /* Sets the font size for paragraph text. */
+    font-size: 12px;
+    /* Sets the color for the paragraph text to a dark gray. */
     color: #A0A0A0;
+    /* Increases the space between lines of text for readability. */
     line-height: 1.5;
 }
 
 strong {
+    /* Sets the color of bolded text to a lighter gray. */
     color: #C0C0C0;
 }
 
 section {
+    /* Adds a 40-pixel space to the bottom of each section. */
     margin-bottom: 40px;
 }
 
@@ -61,10 +71,15 @@ section {
  * JOB MESSAGE STYLES
  */
 .job-message {
+    /* Sets a 1-pixel solid orange border around the container. */
     border: 1px solid #FF991C;
-    padding: 10px;
+    /* Adds padding inside the box for spacing between the border and the text. */
+    padding: 12px;
+    /* Rounds the corners of the border by 8 pixels. */
     border-radius: 8px;
-    margin: 30px 0;
+    /* Adds a 40-pixel margin to the top and bottom of the container. */
+    margin: 40px 0;
+    /* Centers the text within the container. */
     text-align: center;
 }
 
@@ -72,17 +87,26 @@ section {
  * LIST AND LINK STYLES
  */
 ul {
+    /* Removes bullet points from the list. */
     list-style-type: none;
+    /* Resets default margins and padding on the list. */
     margin: 0;
     padding: 0;
 }
 
 li {
-    margin-bottom: 10px;
+    /* Reduces the space between each list item. */
+    margin-bottom: 5px;
+    /* Adds a 1px solid white line to the bottom of each list item. */
+    border-bottom: 1px solid #fff;
+    /* Adds some internal padding to space the text from the line. */
+    padding-bottom: 5px;
 }
 
 a {
+    /* Sets the link color to white. */
     color: #fff;
+    /* Removes the default underline from links. */
     text-decoration: none;
 }
 
@@ -90,14 +114,18 @@ a {
  * FOOTER STYLES
  */
 footer {
+    /* Adds a 40-pixel space to the top of the footer. */
     margin-top: 40px;
 }
 
 .footer-text {
+    /* Sets a smaller font size for the footer text. */
     font-size: 12px;
+    /* Sets a lighter color for the footer text. */
     color: #A0A0A0;
 }
 
 .footer-text a {
+    /* Sets the color of links within the footer to match the text. */
     color: #A0A0A0;
 }
