@@ -13,6 +13,8 @@ body {
     justify-content: flex-start;
     /* Prevents horizontal scrolling from transformed or overflowing content. */
     overflow-x: hidden;
+    /* Removes default margins from the body */
+    margin: 0;
 }
 
 /* * LAYOUT STYLES
@@ -20,14 +22,19 @@ body {
  */
 main {
     /*
+     * Ensures the main container is at least the height of the viewport.
+     * This prevents content from falling off the page.
+     */
+    min-height: 100vh;
+    /*
      * Enables Flexbox on the <main> element, arranging its children
      * (.left-panel and .main-content) horizontally in a row by default.
      */
     display: flex;
-    /* Positions the main container relative to the viewport. */
-    /*position: absolute;
     /* Allows flex items to wrap to a new line when the container shrinks. */
     flex-wrap: wrap;
+    /* Ensures the main container takes up the full width. */
+    width: 100vw;
 }
 
 /*
@@ -35,35 +42,21 @@ main {
  * These rules style the left-hand navigation and content panel.
  */
 .left-panel {
-    /* Ensures the panel is at least 200 pixels wide. */
-    /*min-width: 170px;
-    /* Sets the width of the left panel to 200 pixels to create more space on the left. */
+    /* Sets the width of the left panel to 200 pixels. */
     width: 200px;
-    /* Sets the minimum height of the panel to fill the viewport, but allows it to shrink. */
-    min-height: 100vh;
-    /*height: 100vh;
+    /* Sets the height to fill the parent container. */
+    height: 100%;
     /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
-    /* Sets padding for the left panel. The top and bottom padding
-     * is set to 150px to align the content with the partition line's margins. 
-     */
+    /* Sets padding for the left panel. */
     padding: 160px 20px 150px 30px; /* top right bottom left */
-    /*
-     * Changes how the box model works. Padding and borders are now
-     * included inside the element's width and height, preventing
-     * unwanted resizing.
-     */
+    /* Changes how the box model works. Padding and borders are now
+     * included inside the element's width and height. */
     box-sizing: border-box;
-
     /* Activates Flexbox on the left panel itself. */
     display: flex;
-
-    /*
-     * Changes the main axis of the Flexbox container to a column,
-     * stacking its children (<header> and <nav>) vertically.
-     */
+    /* Changes the main axis of the Flexbox container to a column. */
     flex-direction: column;
-
     /* Aligns all children to the start (top) of the flex container. */
     justify-content: flex-start;
 }
@@ -149,17 +142,9 @@ main {
     background-color: #fff;
     /* Makes the line 1 pixel wide. */
     width: 1px;
-    /*
-     * Calculates the height to be 100% of the viewport height minus
-     * 300 pixels (150px for top and 150px for bottom), creating a "floating" effect.
-     */
-    min-height: calc(100vh - 300px);
-    /*height: calc(100vh - 300px);
-    /*
-     * Adds a 150px margin to the top and bottom of the line,
-     * and 0px margin to the left and right, to push it away from
-     * its neighboring elements.
-     */
+    /* Ensures the partition line fills the height of the main container. */
+    height: 100%;
+    /* Adds a margin to the top and bottom of the line. */
     margin: 150px 0;
 }
 
@@ -168,11 +153,6 @@ main {
  * These rules style the right-hand content area.
  */
 .main-content {
-    /* Enables Flexbox on the main content container. */
-    /*display: flex;
-    /* Aligns the content to the top of the container. */
-    /*align-items: flex-start;
-    /*flex: 1 1 auto;
     /* Adds top and left padding to align with the left panel's content. */
     padding: 160px 40px 0 40px; /* top right bottom left */
     /* Tells the element to take up all remaining space. */
