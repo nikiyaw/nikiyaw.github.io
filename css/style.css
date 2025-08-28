@@ -28,9 +28,9 @@ main {
  */
 .left-panel {
     /* Ensures the panel is at least 200 pixels wide. */
-    min-width: 170px;
+    /*min-width: 170px;
     /* Sets the width of the left panel to 200 pixels to create more space on the left. */
-    width: 180px;
+    width: 200px;
     /* Sets the height of the panel to fill the entire browser window height. */
     height: 100vh;
     /* Sets the default text color for all content inside the panel to white. */
