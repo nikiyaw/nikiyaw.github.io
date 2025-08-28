@@ -47,23 +47,17 @@ main {
      * stacking its children (<header> and <nav>) vertically.
      */
     flex-direction: column;
-    /* 
-     * Pushes the children (header and nav) to the far end along the vertical axis.
-     */
-    justify-content: space-between;
+    /* Aligns all children to the start (top) of the flex container. */
+    justify-content: flex-start;
 }
 
 /*
- * LEFT PANEL CONTENT POSITIONING
- * These rules add specific margins to position the header and nav.
+ * NAVIGATION POSITIONING
+ * This rule positions the nav buttons relative to the header.
  */
-.left-panel header {
-    /* Adds a margin to the bottom of the header to push the nav away. */
-    margin-bottom: 100px;
-}
-/*.left-panel nav {
-    /* Adds a margin to the top of the nav to push it down. */
-    /*margin-top: 200px;
+.left-panel nav {
+    /* Adds a margin to the top of the nav to push it down from the header. */
+    margin-top: 150px;
 }
 
 /*
