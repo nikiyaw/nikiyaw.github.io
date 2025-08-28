@@ -38,7 +38,7 @@ main {
     /* Sets padding for the left panel. The top and bottom padding
      * is set to 150px to align the content with the partition line's margins. 
      */
-    padding: 160px 20px 150px 20px; /* top right bottom left */
+    padding: 160px 20px 150px 30px; /* top right bottom left */
     /*
      * Changes how the box model works. Padding and borders are now
      * included inside the element's width and height, preventing
