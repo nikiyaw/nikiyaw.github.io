@@ -31,7 +31,9 @@ main {
     height: 100vh;
     /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
-    /* Adjusts padding to create vertical space at the top and bottom. */
+    /* Sets padding for the left panel. The top and bottom padding
+     * is set to 150px to align the content with the partition line's margins. 
+     */
     padding: 150px 20px 150px 20px; /* top right bottom left */
     /*
      * Changes how the box model works. Padding and borders are now
@@ -57,7 +59,7 @@ main {
  */
 .left-panel nav {
     /* Adds a margin to the top of the nav to push it down from the header. */
-    margin-top: 150px;
+    margin-top: 150px; /* Adjust this value to get the exact positioning you want. */
 }
 
 /*
