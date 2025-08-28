@@ -163,7 +163,7 @@ main {
     /* Aligns the content to the top of the container. */
     align-items: flex-start;
     /* Adds top and left padding to align with the left panel's content. */
-    padding: 160px 40px 0 40px;
+    padding: 160px 40px 0 40px; /* top right bottom left */
     flex: 1 0 auto;
 }
 
@@ -173,7 +173,23 @@ main {
  */
 .job-message {
     /* Sets a 1px solid orange border around the container. */
-    border: 1px solid #FF991C; 
+    border: 1px solid #FF991C;
     /* Adds padding inside the box for spacing between the border and the text. */
-    padding: 15px;
+    padding: 10px;
+    /* Rounds the corners of the border by 5 pixels. */
+    border-radius: 5px;
+}
+
+.job-message p {
+    /* Sets the color of the text to a light gray, matching the nav buttons. */
+    color: #C0C0C0;
+    /* Aligns the text to the center. */
+    text-align: center;
+    /* Removes the default margin on the paragraph tag. */
+    margin: 0;
+}
+
+.job-message strong {
+    /* Ensures the bolded text is the same color as the rest of the message. */
+    color: #C0C0C0;
 }
