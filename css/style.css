@@ -80,6 +80,15 @@ main {
 }
 
 /*
+ * NAVIGATION LIST ITEM STYLES
+ * These rules target the individual list items (<li>) within the navigation.
+ */
+.left-panel li {
+    /* Adds a 20-pixel space to the bottom of each list item. */
+    margin-bottom: 20px;
+}
+
+/*
  * PARTITION LINE STYLES
  * These rules create the "floating" vertical line.
  */
