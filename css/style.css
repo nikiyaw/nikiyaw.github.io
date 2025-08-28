@@ -167,6 +167,8 @@ main {
     /* Adds top and left padding to align with the left panel's content. */
     padding: 160px 40px 0 40px; /* top right bottom left */
     flex: 1 0 auto;
+    /* Prevents the content area from shrinking below 200 pixels wide. */
+    min-width: 200px;
 }
 
 /*
