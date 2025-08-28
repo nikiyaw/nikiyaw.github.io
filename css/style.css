@@ -38,7 +38,7 @@ main {
     /* Sets padding for the left panel. The top and bottom padding
      * is set to 150px to align the content with the partition line's margins. 
      */
-    padding: 150px 20px 150px 20px; /* top right bottom left */
+    padding: 160px 20px 150px 20px; /* top right bottom left */
     /*
      * Changes how the box model works. Padding and borders are now
      * included inside the element's width and height, preventing
@@ -98,7 +98,7 @@ main {
  */
 .left-panel li {
     /* Adds a 15-pixel space to the bottom of each list item. */
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .left-panel h1, .left-panel p {
@@ -111,12 +111,12 @@ main {
  */
 .left-panel p, .left-panel a {
     /* Sets the font size for the location and navigation links to 16 pixels. */
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .left-panel h1 {
     /* Sets the font size for your name to be slightly larger than the rest. */
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /*
