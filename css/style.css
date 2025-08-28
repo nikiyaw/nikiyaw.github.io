@@ -31,8 +31,8 @@ main {
     height: 100vh;
     /* Sets the default text color for all content inside the panel to white. */
     color: #fff;
-    /* Adds 30 pixels of space (padding) inside the panel on all sides. */
-    padding: 30px;
+    /* Adjusts padding to create vertical space at the top and bottom. */
+    padding: 150px 20px 150px 20px; /* top right bottom left */
     /*
      * Changes how the box model works. Padding and borders are now
      * included inside the element's width and height, preventing
