@@ -76,6 +76,12 @@ section {
     border-radius: 8px;
     /* Adds a 40-pixel margin to the top and bottom of the container. */
     margin: 40px 0;
+    /* Activates Flexbox on this container. */
+    display: flex;
+    /* Centers the content horizontally. */
+    justify-content: center;
+    /* Centers the content vertically. */
+    align-items: center;
     /* Centers the text within the container. */
     text-align: center;
 }
