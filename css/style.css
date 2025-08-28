@@ -33,8 +33,6 @@ main {
     display: flex;
     /* Allows flex items to wrap to a new line when the container shrinks. */
     flex-wrap: wrap;
-    /* Ensures the main container takes up the full width. */
-    width: 100vw;
 }
 
 /*
