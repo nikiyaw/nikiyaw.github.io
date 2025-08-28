@@ -123,6 +123,13 @@ a {
     padding-bottom: 2px;
 }
 
+a:hover {
+    /* Changes the color of the link text when you hover over it. */
+    color: #FF991C;
+    /* This rule ensures the border also changes color on hover. */
+    border-bottom: 1px solid #FF991C;
+}
+
 /*
  * PROJECTS AND NOTES SECTIONS
  * These rules reduce the space between the heading and the list.
