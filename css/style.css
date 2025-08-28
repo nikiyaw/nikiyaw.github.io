@@ -161,12 +161,12 @@ main {
  */
 .main-content {
     /* Enables Flexbox on the main content container. */
-    display: flex;
+    /*display: flex;
     /* Aligns the content to the top of the container. */
-    align-items: flex-start;
+    /*align-items: flex-start;
+    /*flex: 1 1 auto;
     /* Adds top and left padding to align with the left panel's content. */
     padding: 160px 40px 0 40px; /* top right bottom left */
-    flex: 1 1 auto;
     /* Prevents the content area from shrinking below 200 pixels wide. */
     min-width: 200px;
 }
