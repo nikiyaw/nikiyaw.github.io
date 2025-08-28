@@ -166,7 +166,7 @@ main {
     align-items: flex-start;
     /* Adds top and left padding to align with the left panel's content. */
     padding: 160px 40px 0 40px; /* top right bottom left */
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     /* Prevents the content area from shrinking below 200 pixels wide. */
     min-width: 200px;
 }
@@ -181,7 +181,7 @@ main {
     /* Adds padding inside the box for spacing between the border and the text. */
     padding: 12px;
     /* Rounds the corners of the border by 5 pixels. */
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .job-message p {
