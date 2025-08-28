@@ -118,9 +118,9 @@ a {
  * These rules reduce the space between the heading and the list.
  */
 #projects h2, #biweekly-notes h2 {
-    margin-bottom: 5px; /* Reduces the space below the heading */
+    margin-bottom: 3px; /* Reduces the space below the heading */
 }
 
 #projects ul, #biweekly-notes ul {
-    margin-top: 5px; /* Reduces the space above the list */
+    margin-top: 3px; /* Reduces the space above the list */
 }
