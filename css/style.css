@@ -7,8 +7,6 @@ body {
     background-color: #000;
     /* Sets the default font for the entire page */
     font-family: 'IBM Plex Mono', monospace;
-    /* Prevents horizontal scrolling from transformed content. */
-    overflow-x: hidden;
 }
 
 /* * LAYOUT STYLES
@@ -20,8 +18,10 @@ main {
      * (.left-panel and .main-content) horizontally in a row by default.
      */
     display: flex;
-    /* Moves the entire layout (including the left panel) to the left. */
-    transform: translateX(-50px);
+    /* Positions the main container relative to the viewport. */
+    position: absolute;
+    /* Pushes the container to the left by 50 pixels from the viewport's left edge. */
+    left: -50px;
 }
 
 /*
