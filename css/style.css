@@ -19,7 +19,9 @@ main {
      */
     display: flex;
     /* Positions the main container relative to the viewport. */
-    position: absolute;
+    /*position: absolute;
+    /* Allows flex items to wrap to a new line when the container shrinks. */
+    flex-wrap: wrap;
 }
 
 /*
@@ -175,7 +177,7 @@ main {
     /* Sets a 1px solid orange border around the container. */
     border: 1px solid #FF991C;
     /* Adds padding inside the box for spacing between the border and the text. */
-    padding: 10px;
+    padding: 12px;
     /* Rounds the corners of the border by 5 pixels. */
     border-radius: 5px;
 }
