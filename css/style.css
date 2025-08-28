@@ -20,6 +20,8 @@ main {
      * (.left-panel and .main-content) horizontally in a row by default.
      */
     display: flex;
+    /* Moves the entire layout (including the left panel) to the left. */
+    transform: translateX(-50px);
 }
 
 /*
@@ -55,9 +57,6 @@ main {
 
     /* Aligns all children to the start (top) of the flex container. */
     justify-content: flex-start;
-
-    /* Moves the panel 50 pixels to the left without affecting the layout flow. */
-    transform: translateX(-50px);
 }
 
 /*
