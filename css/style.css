@@ -93,7 +93,7 @@ ul {
 
 li {
     /* Adds space between each list item. */
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     /* Removes the full-width border. */
     border-bottom: none;
     /* Removes the padding from the bottom of the list item. */
