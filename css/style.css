@@ -48,11 +48,9 @@ main {
      */
     flex-direction: column;
     /* 
-    /* Changes from space-between to center.
-    /* This will center the children (header and nav) along the vertical axis.
-    /* It will also create equal space above the header and below the nav.
-    */
-    justify-content: center;
+     * Pushes the children (header and nav) to the far end along the vertical axis.
+     */
+    justify-content: space-between;
 }
 
 /*
