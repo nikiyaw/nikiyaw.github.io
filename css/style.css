@@ -152,7 +152,7 @@ a:hover {
     display: flex;
     justify-content: space-between; /* Pushes items to opposite ends */
     align-items: center; /* Vertically aligns items in the center */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 /* Position and style the theme toggle button */
