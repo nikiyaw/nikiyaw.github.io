@@ -76,8 +76,8 @@ section {
     padding: 12px;
     /* Rounds the corners of the border by 8 pixels. */
     border-radius: 8px;
-    /* Adds a 40-pixel margin to the top and bottom of the container. */
-    margin: 20px 0px;
+    /* top, right, bottom, left */
+    margin: 20px 0px 40px 0px;
     /* Activates Flexbox on this container. */
     display: flex;
     /* Centers the content horizontally. */
