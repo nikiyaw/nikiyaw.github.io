@@ -14,7 +14,7 @@ body {
     /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
     /* Adds a smooth transition effect for color changes over 0.5 seconds */
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 2.5s ease, color 2.5s ease;
 }
 
 /*
