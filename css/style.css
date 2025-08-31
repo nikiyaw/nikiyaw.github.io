@@ -14,7 +14,7 @@ body {
     /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
     /* Adds a smooth transition effect for color changes over 0.5 seconds */
-    transition: background-color 2.5s ease, color 2.5s ease;
+    transition: background-color 2.3s ease, color 2.3s ease;
 }
 
 /*
@@ -165,33 +165,33 @@ a:hover {
     outline: none; 
 }
 
-/*
+/* OPTION 1
  * DARK/LIGHT MODE STYLES
  * These rules apply when the light mode is active.
  */
 body.light-mode {
-    background-color: #f0f0f0; /* Soft off-white background */
-    color: #444; /* Dark gray text color */
+    background-color: #fdf7e3; /* Soft cream background */
+    color: #524d45; /* Dark, muted brown text color */
 }
 
 body.light-mode h2 {
-    color: #111; /* Darker heading color */
+    color: #3e3933; /* Deeper brown heading color */
 }
 
 body.light-mode p {
-    color: #666; /* Medium gray paragraph color */
+    color: #524d45; /* Muted brown paragraph color */
 }
 
 body.light-mode strong {
-    color: #000; /* Black for bolded text */
+    color: #3e3933; /* Deeper brown for bolded text */
 }
 
 body.light-mode a {
-    color: #666; /* Dark link color */
-    border-bottom: 1px solid #666;
+    color: #968a7f; /* Medium brown for links */
+    border-bottom: 1px solid #968a7f;
 }
 
 body.light-mode a:hover {
-    color: #FF991C; /* Orange hover color (consistent) */
-    border-bottom: 1px solid #FF991C;
+    color: #d2691e; /* Burnt sienna hover color */
+    border-bottom: 1px solid #d2691e;
 }

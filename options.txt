@@ -1,0 +1,30 @@
+/* OPTION 1
+ * DARK/LIGHT MODE STYLES
+ * These rules apply when the light mode is active.
+ */
+body.light-mode {
+    background-color: #f0f0f0; /* Soft off-white background */
+    color: #444; /* Dark gray text color */
+}
+
+body.light-mode h2 {
+    color: #111; /* Darker heading color */
+}
+
+body.light-mode p {
+    color: #666; /* Medium gray paragraph color */
+}
+
+body.light-mode strong {
+    color: #000; /* Black for bolded text */
+}
+
+body.light-mode a {
+    color: #666; /* Dark link color */
+    border-bottom: 1px solid #666;
+}
+
+body.light-mode a:hover {
+    color: #FF991C; /* Orange hover color (consistent) */
+    border-bottom: 1px solid #FF991C;
+}
