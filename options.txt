@@ -59,3 +59,35 @@ body.light-mode a:hover {
     color: #d2691e; /* Burnt sienna hover color */
     border-bottom: 1px solid #d2691e;
 }
+
+/* OPTION 3
+/* 
+ * DARK/LIGHT MODE STYLES
+ * These rules apply when the light mode is active.
+ */
+body.light-mode {
+    background-color: #eaf3ff; /* Very light powder blue background */
+    color: #2b3a4a; /* Deep navy blue text color */
+}
+
+body.light-mode h2 {
+    color: #1a2a3a; /* Darker navy for headings */
+}
+
+body.light-mode p {
+    color: #2b3a4a; /* Deep navy blue paragraph color */
+}
+
+body.light-mode strong {
+    color: #1a2a3a; /* Darker navy for bolded text */
+}
+
+body.light-mode a {
+    color: #5f728c; /* Muted blue-gray for links */
+    border-bottom: 1px solid #5f728c;
+}
+
+body.light-mode a:hover {
+    color: #FF991C; /* Orange hover color (consistent) */
+    border-bottom: 1px solid #FF991C;
+}
