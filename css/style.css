@@ -133,6 +133,88 @@ a:hover {
 }
 
 /*
+ * ACCORDION STYLES
+ * These rules style the details and summary elements.
+ */
+#projects details {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#projects summary {
+    /* Sets the summary to behave like a list item with a pointer cursor. */
+    list-style: none; 
+    cursor: pointer;
+    /* Styles the text of the summary to match your links. */
+    color: #A0A0A0;
+    font-size: 14px;
+    text-decoration: none;
+    /* Adds a border that only follows the length of the text. */
+    border-bottom: 1px solid #A0A0A0;
+    padding-bottom: 2px;
+    /* Position for our custom pseudo-element icon */
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 10px; /* Space between projects */
+}
+
+/* Adds a custom plus/minus icon for the open/closed state */
+#projects summary::before {
+    content: '+'; /* Plus sign for the closed state */
+    font-weight: bold;
+    color: #FF991C; /* Your accent color */
+    margin-right: 5px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Rotates the icon when the details are open to look like a minus sign */
+#projects details[open] summary::before {
+    content: '−'; /* Minus sign for the open state */
+    transform: rotate(180deg);
+}
+
+/* Style the content inside the details tag */
+#projects details > div {
+    margin-top: 10px;
+    margin-left: 20px; /* Indent the content for a nested look */
+}
+
+/* Adjust the styling of the nested elements to match your main body text */
+#projects details p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#projects details h3 {
+    font-size: 14px;
+    color: #C0C0C0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#projects details ul {
+    margin-top: 5px;
+}
+
+#projects details li {
+    margin-bottom: 5px;
+}
+
+#projects details li::before {
+    content: '•'; /* Adds a bullet point for nested lists */
+    margin-right: 5px;
+    color: #A0A0A0;
+}
+
+/* Hover effects for the summary, matching your link hover */
+#projects summary:hover {
+    color: #FF991C;
+    border-bottom: 1px solid #FF991C;
+}
+
+/*
  * PROJECTS AND NOTES SECTIONS
  * These rules reduce the space between the heading and the list.
  */
@@ -193,4 +275,31 @@ body.light-mode a {
 body.light-mode a:hover {
     color: #FF991C; /* Orange hover color (consistent) */
     border-bottom: 1px solid #FF991C;
+}
+
+
+body.light-mode #projects summary {
+    color: #666;
+    border-bottom: 1px solid #666;
+}
+
+body.light-mode #projects summary:hover {
+    color: #FF991C;
+    border-bottom: 1px solid #FF991C;
+}
+
+body.light-mode #projects summary::before {
+    color: #FF991C;
+}
+
+body.light-mode #projects details h3 {
+    color: #444;
+}
+
+body.light-mode #projects details p {
+    color: #666;
+}
+
+body.light-mode #projects details li::before {
+    color: #666;
 }
