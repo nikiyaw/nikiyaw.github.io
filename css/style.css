@@ -252,6 +252,10 @@ a:hover {
     color: #FF991C; /* Changes color to your accent color on hover */
 }
 
+.project-link a i {
+    margin-right: 5px;
+}
+
 /*
  * TOP ROW STYLES
  * This rule positions the contact info and theme toggle button
