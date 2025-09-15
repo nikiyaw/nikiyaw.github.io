@@ -183,23 +183,35 @@ a:hover {
 
 /* Adjust the styling of the nested elements to match your main body text */
 #projects details p {
+    font-size: 14px;
+    color: #A0A0A0;
+    line-height: 1.5;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 #projects details h3 {
     font-size: 14px;
-    color: #C0C0C0;
+    color: #fff;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
 #projects details ul {
-    margin-top: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 #projects details li {
+    font-size: 14px;
+    color: #A0A0A0;
     margin-bottom: 5px;
+}
+
+#projects details li strong {
+    font-size: 14px;
+    color: #C0C0C0;
 }
 
 #projects details li::before {
