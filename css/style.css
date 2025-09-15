@@ -136,13 +136,13 @@ a:hover {
  * ACCORDION STYLES
  * These rules style the details and summary elements.
  */
-#projects details {
+#projects details, #biweekly-notes details {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-#projects summary {
+#projects summary, #biweekly-notes summary {
     /* Sets the summary to behave like a list item with a pointer cursor. */
     list-style: none; 
     cursor: pointer;
@@ -161,7 +161,7 @@ a:hover {
 }
 
 /* Adds a custom plus/minus icon for the open/closed state */
-#projects summary::before {
+#projects summary::before, #biweekly-notes summary::before {
     content: '+'; /* Plus sign for the closed state */
     font-weight: bold;
     color: #FF991C; /* Your accent color */
@@ -171,19 +171,19 @@ a:hover {
 }
 
 /* Rotates the icon when the details are open to look like a minus sign */
-#projects details[open] summary::before {
+#projects details[open] summary::before, #biweekly-notes details[open] summary::before {
     content: '−'; /* Minus sign for the open state */
     transform: rotate(180deg);
 }
 
 /* Style the content inside the details tag */
-#projects details > div {
+#projects details > div, #biweekly-notes details > div {
     margin-top: 10px;
     margin-left: 20px; /* Indent the content for a nested look */
 }
 
 /* Adjust the styling of the nested elements to match your main body text */
-#projects details p {
+#projects details p, #biweekly-notes details p {
     font-size: 14px;
     color: #A0A0A0;
     line-height: 1.5;
@@ -191,39 +191,39 @@ a:hover {
     margin-bottom: 10px;
 }
 
-#projects details h3 {
+#projects details h3, #biweekly-notes details h3 {
     font-size: 14px;
     color: #fff;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
-#projects details ul {
+#projects details ul, #biweekly-notes details ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#projects details li {
+#projects details li, #biweekly-notes details li {
     font-size: 14px;
     color: #A0A0A0;
     margin-bottom: 5px;
     line-height: 1.5; /* Add this line to increase spacing between wrapped lines */
 }
 
-#projects details li strong {
+#projects details li strong, #biweekly-notes details li strong {
     font-size: 14px;
     color: #C0C0C0;
 }
 
-#projects details li::before {
+#projects details li::before, #biweekly-notes details li::before {
     content: '•'; /* Adds a bullet point for nested lists */
     margin-right: 5px;
     color: #A0A0A0;
 }
 
 /* Hover effects for the summary, matching your link hover */
-#projects summary:hover {
+#projects summary:hover, #biweekly-notes summary:hover {
     color: #FF991C;
     border-bottom: 1px solid #FF991C;
 }
@@ -308,31 +308,40 @@ body.light-mode a:hover {
 }
 
 
-body.light-mode #projects summary {
+body.light-mode #projects summary, body.light-mode #biweekly-notes summary {
     color: #666;
     border-bottom: 1px solid #666;
 }
 
-body.light-mode #projects summary:hover {
+body.light-mode #projects summary:hover, body.light-mode #biweekly-notes summary:hover {
     color: #FF991C;
     border-bottom: 1px solid #FF991C;
 }
 
-body.light-mode #projects summary::before {
+body.light-mode #projects summary::before, body.light-mode #biweekly-notes summary::before {
     color: #FF991C;
 }
 
-body.light-mode #projects details h3 {
+body.light-mode #projects details h3, body.light-mode #biweekly-notes details h3 {
     color: #444;
 }
 
-body.light-mode #projects details p {
+body.light-mode #projects details p, body.light-mode #biweekly-notes details p {
     color: #666;
 }
 
-body.light-mode #projects details li::before {
+body.light-mode #projects details li, body.light-mode #biweekly-notes details li {
     color: #666;
 }
+
+body.light-mode #projects details li strong, body.light-mode #biweekly-notes details li strong {
+    color: #000;
+}
+
+body.light-mode #projects details li::before, body.light-mode #biweekly-notes details li::before {
+    color: #666;
+}
+
 
 /* Light mode styles for the Github icon */
 body.light-mode .project-link a {
