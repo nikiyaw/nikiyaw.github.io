@@ -240,6 +240,18 @@ a:hover {
     margin-top: 3px; /* Reduces the space above the list */
 }
 
+.project-link a {
+    /* Sets the color and removes the underline, as it will be an icon now */
+    color: #A0A0A0;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* Hover effect */
+.project-link a:hover {
+    color: #FF991C; /* Changes color to your accent color on hover */
+}
+
 /*
  * TOP ROW STYLES
  * This rule positions the contact info and theme toggle button
@@ -316,4 +328,13 @@ body.light-mode #projects details p {
 
 body.light-mode #projects details li::before {
     color: #666;
+}
+
+/* Light mode styles for the Github icon */
+body.light-mode .project-link a {
+    color: #666;
+}
+
+body.light-mode .project-link a:hover {
+    color: #FF991C;
 }
