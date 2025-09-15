@@ -157,6 +157,7 @@ a:hover {
     position: relative;
     padding-left: 0;
     margin-bottom: 10px; /* Space between projects */
+    margin-top: 15px; /* Add this line to create space below the heading */
 }
 
 /* Adds a custom plus/minus icon for the open/closed state */
@@ -207,6 +208,7 @@ a:hover {
     font-size: 14px;
     color: #A0A0A0;
     margin-bottom: 5px;
+    line-height: 1.5; /* Add this line to increase spacing between wrapped lines */
 }
 
 #projects details li strong {
