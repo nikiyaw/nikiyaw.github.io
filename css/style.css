@@ -36,7 +36,7 @@ main {
  */
 h2 {
     /* Sets the font size for subheadings. */
-    font-size: 14px;
+    font-size: 16px;
     /* Sets the color for the subheadings to white. */
     color: #fff;
     /* Adds some space below the subheading. */
@@ -45,7 +45,7 @@ h2 {
 
 p {
     /* Sets the font size for paragraph text. */
-    font-size: 14px;
+    font-size: 16px;
     /* Sets the color for the paragraph text to a dark gray. */
     color: #A0A0A0;
     /* Increases the space between lines of text for readability. */
@@ -116,7 +116,7 @@ a {
     /* Sets the link color to match the paragraph text color. */
     color: #A0A0A0;
     /* Sets the font size of the link to match the paragraph text. */
-    font-size: 14px;
+    font-size: 16px;
     /* Removes the default underline from links. */
     text-decoration: none;
     /* Adds a border that only follows the length of the text. */
@@ -148,7 +148,7 @@ a:hover {
     cursor: pointer;
     /* Styles the text of the summary to match your links. */
     color: #A0A0A0;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     /* Adds a border that only follows the length of the text. */
     border-bottom: 1px solid #A0A0A0;
@@ -184,7 +184,7 @@ a:hover {
 
 /* Adjust the styling of the nested elements to match your main body text */
 #projects details p, #biweekly-notes details p {
-    font-size: 14px;
+    font-size: 16px;
     color: #A0A0A0;
     line-height: 1.5;
     margin-top: 0;
@@ -192,7 +192,7 @@ a:hover {
 }
 
 #projects details h3, #biweekly-notes details h3 {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -205,14 +205,14 @@ a:hover {
 }
 
 #projects details li, #biweekly-notes details li {
-    font-size: 14px;
+    font-size: 16px;
     color: #A0A0A0;
     margin-bottom: 5px;
     line-height: 1.5; /* Add this line to increase spacing between wrapped lines */
 }
 
 #projects details li strong, #biweekly-notes details li strong {
-    font-size: 14px;
+    font-size: 16px;
     color: #C0C0C0;
 }
 
