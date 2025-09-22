@@ -92,14 +92,21 @@
                     <details>
                         <summary>14 Sept 2025</summary>
                         <div>
-                            <p>The first week of my backend development journey felt overwhelming. My initial approach was a passive one, simply following instructions without a clear understanding of the "why" behind each tool. This quickly broke down when I faced a persistent database migration issue, which forced me to re-evaluate my learning process.</p>
-                            <p>This roadblock became a pivotal moment. I switched to an active learning approach, independently researching each tool and how it functions within the larger system. This shift was the key to moving forward and solidified my foundational understanding of backend concepts.</p>
-                            <p>Several core backend concepts that I have learnt:</p>
+                            <p>It's amazing how a tiny missing import can eat up an entire weekend. But that's the story of my first two-week project: the Wellness Tracker API. While the end result is a foundational backend for tracking habits, the real story is in the unexpected lessons learned and the bugs I battled along the way.</p>
+                            <h3>The Starting Line: Why FastAPI and PostgreSQL?</h3>
+                            <p>My goal was to learn modern, production-grade tools. I chose FastAPI for its performance and developer-friendly setup, making it the perfect entry point for my first full-stack API. For the database, I went with PostgreSQL, an industry-standard, robust, and open-source option. Along the way, I also learned a lot about project structure and how to organize my files, a skill I didn't get to fully practice in school or at work.</p>
+                            <h3>The Hurdles: The Bug That Almost Won</h3>
+                            <p>The real challenge came with getting Alembic and SQLAlchemy to play nice. While SQLAlchemy itself made sense to me as a way to manage the database in Python, the migration process with Alembic was a different beast entirely.</p>
+                            <p>I hit a major roadblock trying to create my users and habits tables. Every time I ran the migration, the tables just wouldn't appear in my remote PostgreSQL database. I was completely stumped. My initial troubleshooting was a frantic process of elimination: I checked the database URL for typos, tinkered with psycopg versions, and even deleted the entire Render database service to start from scratch. Nothing worked. The error was always the same: users table not found.</p>
+                            <h3>The "A-ha!" Moment</h3>
+                            <p>After countless hours, I finally found the problem. A single, missing import statement! Alembic couldn't "see" the SQLAlchemy schemas I had defined for my tables, so it couldn't generate the correct code in the migration script. The schemas existed, but Alembic didn't know they did! Once I fixed that one line, the scripts generated as they should, and the tables were created instantly. It was a massive learning moment about how these tools interact under the hood.</p>
+                            <p>I also ran into some interesting challenges with GitHub Actions. While my test scripts ran perfectly locally using a SQLite database, they failed in the cloud environment. This forced me to rethink my testing strategy and adapt the pipeline for different environments, a valuable lesson in building for the real world.</p>
+                            <h3>What's Next?</h3>
+                            <p>I'm thrilled with the progress and the lessons learned. The API now supports user authentication and basic habit tracking, which is perfect for my own fitness journey. I'm excited to continue building on this foundation. Here's what's next on the roadmap:</p>
                             <ul>
-                                <li><strong>API and Frameworks:</strong> I learned that an API is a communication bridge, and a framework like FastAPI simplifies the creation of the endpoints that allow different services to talk to each other.</li>
-                                <li><strong>Database Management:</strong> I now understand the distinct roles of SQLAlchemy (as an ORM for object-to-database mapping) and Alembic (as a tool for managing database schema changes and history). This provided a crucial "aha!" moment, clarifying why a migrations tool is so essential for maintaining a live database.</li>
-                                <li><strong>Security & Best Practices:</strong> I implemented secure practices by hashing passwords with passlib and storing sensitive information like the database URL and a SECRET_KEY in .env files, which are crucial for managing credentials securely.</li>
-                                <li><strong>Deployment Workflow:</strong> I gained hands-on experience with the complete development cycle, from writing code and a test suite with Pytest to setting up a continuous deployment pipeline with GitHub Actions and hosting the application on Render.</li>
+                                <li><strong>Expanded Features:</strong> Adding dedicated endpoints for workouts and recipes.</li>
+                                <li><strong>Security & Scalability:</strong> Implementing rate-limiting to protect against malicious behavior.</li>
+                                <li><strong>Data Aggregation:</strong> Creating a way to analyze user data, such as a weekly summary of completed habits.</li>
                             </ul>
                         </div>
                     </details>
