@@ -137,6 +137,30 @@
                         </div>
                     </details>
                 </li>
+                <li>
+                    <details>
+                        <summary>28 Sept 2025</summary>
+                        <div>
+                            <p>For my second backend project, I took on something a bit more advanced than my last API: building an Asynchronous Job Queue Service. Instead of just making endpoints and connecting them to a database, this project pushed me into new territory—distributed task queues, real-time monitoring, and structuring a more complex backend.</p>
+                            <h3>Why this project?</h3>
+                            <p>Honestly, this one wasn’t even my idea—it came as a recommendation when I said I wanted to go deeper into backend development. And it turned out to be the perfect next step. Unlike my first project (which was mostly CRUD endpoints), this one introduced me to how production systems handle long-running, resource-intensive tasks without blocking the main application. I got hands-on with Celery and Redis, two industry-standard tools for asynchronous processing, and started to see how these pieces fit into larger systems.</p>
+                            <h3>The Hurdles: Strict Typing Everywhere</h3>
+                            <p>I grasped Redis and Celery pretty quickly—they make sense once you see them in action. But the real challenge came when I tried to tighten up the project with typing improvements. It forced me to think carefully about how data flows across the whole pipeline: API input schemas, Pydantic models, database columns, and task definitions. Everything had to line up perfectly, or mypy would complain. Debugging those mismatches was frustrating at first, but it taught me a lot about consistency and the importance of strong typing in catching errors early.</p>
+                            <h3>What I picked up along the way</h3>
+                            <p>There wasn’t a single big “A-ha!” moment this time, but instead a lot of smaller lessons. I started to understand how to properly organize backend components: having centralized configs for settings, database connections, Celery, and logging, then wiring them into different modules cleanly. It felt less like hacking things together and more like designing a real system.</p>
+                            <h3>The fun part</h3>
+                            <p>Even though this was a backend-heavy project, I had fun playing with the frontend dashboard. Watching jobs appear, update in real-time, and change status as workers picked them up made everything feel tangible. It’s the kind of feedback loop that makes backend systems exciting—suddenly all those moving parts click together, and you can see it working live.</p>
+                            <h3>What's Next?</h3>
+                            <p>Now that the basics are in place, I see a lot of directions this project could grow:</p>
+                            <ul>
+                                <li><strong>Error handling & retries:</strong> building smarter workflows for failed jobs.</li>
+                                <li><strong>Authentication & multi-user support:</strong> letting different users manage their own queues.</li>
+                                <li><strong>Deployment to the cloud:</strong> running this on GCP/AWS with monitoring dashboards.</li>
+                                <li><strong>More complex tasks:</strong> chaining jobs, scheduling, or even supporting different job types.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </li>
             </ul>
         </section>
 
