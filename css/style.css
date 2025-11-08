@@ -1,90 +1,60 @@
 /*
  * GENERAL STYLES
- * These rules apply to the entire page.
  */
 body {
-    /* Sets the background color of the entire webpage to black. */
-    background-color: #000;
-    /* Sets the default font for the entire page. */
+    background-color: #f8f9fa; /* light gray background */
     font-family: 'IBM Plex Mono', monospace;
-    /* Sets the text color to white by default. */
-    color: #fff;
-    /* Sets the body to have a minimum height of 100% of the viewport height. */
+    color: #333; /* primary text color */
     min-height: 100vh;
-    /* Ensures the body has no default margin, preventing unwanted scrollbars. */
     margin: 0;
-    /* Adds a smooth transition effect for color changes over 0.5 seconds */
-    transition: background-color 2.3s ease, color 2.3s ease;
 }
 
 /*
- * MAIN CONTAINER STYLES
- * This rule creates the "centered block" look.
+ * MAIN LAYOUT
  */
 main {
-    /* Sets the maximum width of the content block to 1000 pixels. */
     max-width: 850px;
-    /* Centers the block on the page by setting the left and right margins to auto. */
     margin: 0 auto;
-    /* Adds padding to the top and bottom, and sides for smaller screens. */
     padding: 80px 20px;
 }
 
 /*
- * TYPOGRAPHY AND SECTION STYLES
- * These rules control the look of the individual elements within the block.
+ * HEADINGS AND TEXT
  */
 h2 {
-    /* Sets the font size for subheadings. */
     font-size: 16px;
-    /* Sets the color for the subheadings to white. */
-    color: #fff;
-    /* Adds some space below the subheading. */
+    color: #111;
     margin-bottom: 24px;
+    letter-spacing: 0.5px;
 }
 
 p {
-    /* Sets the font size for paragraph text. */
     font-size: 16px;
-    /* Sets the color for the paragraph text to a dark gray. */
-    color: #A0A0A0;
-    /* Increases the space between lines of text for readability. */
-    line-height: 1.5;
-    /* Adjusts the top margin to reduce space between the heading and paragraph. */
+    color: #555;
+    line-height: 1.6;
     margin-top: -10px;
-    /* Adds a 20-pixel space to the bottom of the paragraph. */
     margin-bottom: 20px;
 }
 
 strong {
-    /* Sets the color of bolded text to a lighter gray. */
-    color: #C0C0C0;
+    color: #000;
 }
 
 section {
-    /* Adds a 40-pixel space to the bottom of each section. */
     margin-bottom: 40px;
 }
 
 /*
- * JOB MESSAGE STYLES
+ * JOB MESSAGE
  */
 .job-message {
-    /* Sets a 1-pixel solid orange border around the container. */
     border: 1px solid #FF991C;
-    /* Adds padding inside the box for spacing between the border and the text. */
     padding: 12px;
-    /* Rounds the corners of the border by 8 pixels. */
     border-radius: 8px;
-    /* top, right, bottom, left */
     margin: 20px 0px 40px 0px;
-    /* Activates Flexbox on this container. */
     display: flex;
-    /* Centers the content horizontally. */
     justify-content: center;
-    /* Centers the content vertically. */
     align-items: center;
-    /* Centers the text within the container. */
     text-align: center;
 }
 
@@ -93,48 +63,36 @@ section {
 }
 
 /*
- * LIST AND LINK STYLES
+ * LISTS AND LINKS
  */
 ul {
-    /* Removes bullet points from the list. */
     list-style-type: none;
-    /* Resets default margins and padding on the list. */
     margin: 0;
     padding: 0;
 }
 
 li {
-    /* Adds space between each list item. */
     margin-bottom: 0px;
-    /* Removes the full-width border. */
     border-bottom: none;
-    /* Removes the padding from the bottom of the list item. */
     padding-bottom: 0;
 }
 
 a {
-    /* Sets the link color to match the paragraph text color. */
-    color: #A0A0A0;
-    /* Sets the font size of the link to match the paragraph text. */
+    color: #555;
     font-size: 16px;
-    /* Removes the default underline from links. */
     text-decoration: none;
-    /* Adds a border that only follows the length of the text. */
-    border-bottom: 1px solid #A0A0A0;
-    /* Adds a small gap between the text and the border. */
+    border-bottom: 1px solid #aaa;
     padding-bottom: 2px;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-    /* Changes the color of the link text when you hover over it. */
     color: #FF991C;
-    /* This rule ensures the border also changes color on hover. */
     border-bottom: 1px solid #FF991C;
 }
 
 /*
- * ACCORDION STYLES
- * These rules style the details and summary elements.
+ * ACCORDION (Projects + Notes)
  */
 #projects details, #biweekly-notes details {
     border: none;
@@ -143,113 +101,84 @@ a:hover {
 }
 
 #projects summary, #biweekly-notes summary {
-    /* Sets the summary to behave like a list item with a pointer cursor. */
-    list-style: none; 
+    list-style: none;
     cursor: pointer;
-    /* Styles the text of the summary to match your links. */
-    color: #A0A0A0;
+    color: #555;
     font-size: 16px;
-    text-decoration: none;
-    /* Adds a border that only follows the length of the text. */
-    border-bottom: 1px solid #A0A0A0;
+    border-bottom: 1px solid #aaa;
     padding-bottom: 2px;
-    /* Position for our custom pseudo-element icon */
     position: relative;
-    padding-left: 0;
-    margin-bottom: 10px; /* Space between projects */
-    margin-top: 15px; /* Add this line to create space below the heading */
+    margin-bottom: 10px;
+    margin-top: 15px;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Adds a custom plus/minus icon for the open/closed state */
 #projects summary::before, #biweekly-notes summary::before {
-    content: '+'; /* Plus sign for the closed state */
+    content: '+';
     font-weight: bold;
-    color: #FF991C; /* Your accent color */
+    color: #FF991C;
     margin-right: 5px;
     transition: transform 0.2s ease;
     display: inline-block;
 }
 
-/* Rotates the icon when the details are open to look like a minus sign */
 #projects details[open] summary::before, #biweekly-notes details[open] summary::before {
-    content: '−'; /* Minus sign for the open state */
-    transform: rotate(180deg);
+    content: '−';
 }
 
-/* Style the content inside the details tag */
 #projects details > div, #biweekly-notes details > div {
     margin-top: 10px;
-    margin-left: 20px; /* Indent the content for a nested look */
+    margin-left: 20px;
 }
 
-/* Adjust the styling of the nested elements to match your main body text */
 #projects details p, #biweekly-notes details p {
     font-size: 16px;
-    color: #A0A0A0;
-    line-height: 1.5;
+    color: #555;
+    line-height: 1.6;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 #projects details h3, #biweekly-notes details h3 {
     font-size: 16px;
-    color: #fff;
+    color: #222;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
-#projects details ul, #biweekly-notes details ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 #projects details li, #biweekly-notes details li {
     font-size: 16px;
-    color: #A0A0A0;
+    color: #555;
     margin-bottom: 5px;
-    line-height: 1.5; /* Add this line to increase spacing between wrapped lines */
+    line-height: 1.6;
 }
 
 #projects details li strong, #biweekly-notes details li strong {
-    font-size: 16px;
-    color: #C0C0C0;
+    color: #000;
 }
 
 #projects details li::before, #biweekly-notes details li::before {
-    content: '•'; /* Adds a bullet point for nested lists */
+    content: '•';
     margin-right: 5px;
-    color: #A0A0A0;
+    color: #888;
 }
 
-/* Hover effects for the summary, matching your link hover */
 #projects summary:hover, #biweekly-notes summary:hover {
     color: #FF991C;
     border-bottom: 1px solid #FF991C;
 }
 
 /*
- * PROJECTS AND NOTES SECTIONS
- * These rules reduce the space between the heading and the list.
+ * PROJECT LINKS
  */
-#projects h2, #biweekly-notes h2 {
-    margin-bottom: 3px; /* Reduces the space below the heading */
-}
-
-#projects ul, #biweekly-notes ul {
-    margin-top: 3px; /* Reduces the space above the list */
-}
-
 .project-link a {
-    /* Sets the color and removes the underline, as it will be an icon now */
-    color: #A0A0A0;
+    color: #555;
     text-decoration: none;
     border-bottom: none;
 }
 
-/* Hover effect */
 .project-link a:hover {
-    color: #FF991C; /* Changes color to your accent color on hover */
+    color: #FF991C;
 }
 
 .project-link a i {
@@ -257,97 +186,10 @@ a:hover {
 }
 
 /*
- * TOP ROW STYLES
- * This rule positions the contact info and theme toggle button
+ * TOP ROW
  */
 #top-row {
     display: flex;
-    justify-content: space-between; /* Pushes items to opposite ends */
-    align-items: center; /* Vertically aligns items in the center */
-}
-
-/* Position and style the theme toggle button */
-#theme-toggle {
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    /* Optional: Remove any default outline on focus for a cleaner look */
-    outline: none; 
-}
-
-/* 
- * DARK/LIGHT MODE STYLES
- * These rules apply when the light mode is active.
- */
-body.light-mode {
-    background-color: #f0f0f0; /* Soft off-white background */
-    color: #444; /* Dark gray text color */
-}
-
-body.light-mode h2 {
-    color: #111; /* Darker heading color */
-}
-
-body.light-mode p {
-    color: #666; /* Medium gray paragraph color */
-}
-
-body.light-mode strong {
-    color: #000; /* Black for bolded text */
-}
-
-body.light-mode a {
-    color: #666; /* Dark link color */
-    border-bottom: 1px solid #666;
-}
-
-body.light-mode a:hover {
-    color: #FF991C; /* Orange hover color (consistent) */
-    border-bottom: 1px solid #FF991C;
-}
-
-
-body.light-mode #projects summary, body.light-mode #biweekly-notes summary {
-    color: #666;
-    border-bottom: 1px solid #666;
-}
-
-body.light-mode #projects summary:hover, body.light-mode #biweekly-notes summary:hover {
-    color: #FF991C;
-    border-bottom: 1px solid #FF991C;
-}
-
-body.light-mode #projects summary::before, body.light-mode #biweekly-notes summary::before {
-    color: #FF991C;
-}
-
-body.light-mode #projects details h3, body.light-mode #biweekly-notes details h3 {
-    color: #444;
-}
-
-body.light-mode #projects details p, body.light-mode #biweekly-notes details p {
-    color: #666;
-}
-
-body.light-mode #projects details li, body.light-mode #biweekly-notes details li {
-    color: #666;
-}
-
-body.light-mode #projects details li strong, body.light-mode #biweekly-notes details li strong {
-    color: #000;
-}
-
-body.light-mode #projects details li::before, body.light-mode #biweekly-notes details li::before {
-    color: #666;
-}
-
-
-/* Light mode styles for the Github icon */
-body.light-mode .project-link a {
-    color: #666;
-}
-
-body.light-mode .project-link a:hover {
-    color: #FF991C;
+    justify-content: space-between;
+    align-items: center;
 }
