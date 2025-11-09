@@ -75,20 +75,6 @@
                                 </a>
                             </p>
                             <p>A RESTful backend service I developed to serve as the core of a personal wellness application. It functions as a digital journal, allowing users to securely track and manage their habits, workouts, and recipes.</p>
-                            <h3>Key Features</h3>
-                            <ul>
-                                <li><strong>User Authentication:</strong> Secure user registration and login using JWT (JSON Web Tokens).</li>
-                                <li><strong>Data Management:</strong> Implemented CRUD (Create, Read, Update, Delete) endpoints for managing user-specific data, ensuring privacy and data integrity.</li>
-                                <li><strong>Scalable Architecture:</strong> Designed with a modular structure using FastAPI routers, making it easy to add new features like workouts and recipes.</li>
-                            </ul>
-                            <h3>Technology Stack</h3>
-                            <ul>
-                                <li><strong>Framework:</strong> FastAPI</li>
-                                <li><strong>Database:</strong> PostgreSQL</li>
-                                <li><strong>ORM:</strong> SQLAlchemy</li>
-                                <li><strong>Migration:</strong> Alembic</li>
-                                <li><strong>Deployment:</strong> Render (with a CI/CD pipeline using GitHub Actions)</li>
-                            </ul>
                         </div>
                     </details>
                 </li>    
@@ -103,24 +89,6 @@
                                 </a>
                             </p>
                             <p>A backend system for handling long-running or resource-intensive tasks outside the request/response cycle. Users can submit jobs through an API or dashboard, process them asynchronously with Celery workers, and monitor progress in real time.</p>
-                            <h3>Key Features</h3>
-                            <ul>
-                                <li><strong>Job Submission:</strong> Users can submit tasks via a REST API or dashboard form, making it easy to integrate or test workflows.</li>
-                                <li><strong>Asynchronous Processing:</strong> Background tasks are handled by Celery workers with Redis, ensuring the API remains fast and responsive.</li>
-                                <li><strong>Persistent Storage:</strong> Job metadata is stored in PostgreSQL using SQLAlchemy ORM, allowing reliable tracking and historical queries.</li>
-                                <li><strong>Real-Time Monitoring:</strong> A lightweight UI built with TailwindCSS + JS provides visibility into job status and progress.</li>
-                                <li><strong>Containerized Setup:</strong> Docker Compose orchestrates the API, workers, database, and broker for a production-like local environment.</li>
-                            </ul>
-                            <h3>Technology Stack</h3>
-                            <ul>
-                                <li><strong>Framework:</strong> FastAPI</li>
-                                <li><strong>Task Queue:</strong> Celery</li>
-                                <li><strong>Broker/Backend:</strong> Redis</li>
-                                <li><strong>Database:</strong> PostgreSQL</li>
-                                <li><strong>ORM:</strong> SQLAlchemy</li>
-                                <li><strong>UI:</strong> TailwindCSS + Vanilla JS</li>
-                                <li><strong>Orchestration:</strong> Docker Compose (with a CI/CD pipeline using GitHub Actions)</li>
-                            </ul>
                         </div>
                     </details>
                 </li>
