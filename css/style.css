@@ -2,9 +2,9 @@
  * GENERAL STYLES
  */
 body {
-    background-color: #f8f9fa; /* light gray background */
+    background-color: #F8F5F1; /* warm beige background */
     font-family: 'IBM Plex Mono', monospace;
-    color: #333; /* primary text color */
+    color: #2E2B28; /* softer dark brownish-gray text */
     min-height: 100vh;
     margin: 0;
 }
@@ -23,21 +23,21 @@ main {
  */
 h2 {
     font-size: 16px;
-    color: #111;
+    color: #1E1C1A; /* deep warm heading color */
     margin-bottom: 24px;
     letter-spacing: 0.5px;
 }
 
 p {
     font-size: 16px;
-    color: #555;
+    color: #4A423E; /* muted warm gray for text */
     line-height: 1.6;
     margin-top: -10px;
     margin-bottom: 20px;
 }
 
 strong {
-    color: #000;
+    color: #2A2725; /* darker but still warm */
 }
 
 section {
@@ -48,7 +48,7 @@ section {
  * JOB MESSAGE
  */
 .job-message {
-    border: 1px solid #FF991C;
+    border: 1px solid #E89B3C; /* warm bronze accent */
     padding: 12px;
     border-radius: 8px;
     margin: 20px 0px 40px 0px;
@@ -56,6 +56,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #FAF7F3; /* soft warm background for contrast */
 }
 
 .job-message p {
@@ -78,34 +79,36 @@ li {
 }
 
 a {
-    color: #555;
+    color: #4A423E; /* warm neutral link color */
     font-size: 16px;
     text-decoration: none;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #B7A99A; /* subtle warm gray underline */
     padding-bottom: 2px;
     transition: all 0.2s ease;
 }
 
 a:hover {
-    color: #FF991C;
-    border-bottom: 1px solid #FF991C;
+    color: #E89B3C; /* warm bronze hover */
+    border-bottom: 1px solid #E89B3C;
 }
 
 /*
  * ACCORDION (Projects + Notes)
  */
-#projects details, #biweekly-notes details {
+#projects details,
+#biweekly-notes details {
     border: none;
     margin: 0;
     padding: 0;
 }
 
-#projects summary, #biweekly-notes summary {
+#projects summary,
+#biweekly-notes summary {
     list-style: none;
     cursor: pointer;
-    color: #555;
+    color: #4A423E;
     font-size: 16px;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #B7A99A;
     padding-bottom: 2px;
     position: relative;
     margin-bottom: 10px;
@@ -113,72 +116,81 @@ a:hover {
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-#projects summary::before, #biweekly-notes summary::before {
+#projects summary::before,
+#biweekly-notes summary::before {
     content: '+';
     font-weight: bold;
-    color: #FF991C;
+    color: #E89B3C; /* accent color */
     margin-right: 5px;
     transition: transform 0.2s ease;
     display: inline-block;
 }
 
-#projects details[open] summary::before, #biweekly-notes details[open] summary::before {
+#projects details[open] summary::before,
+#biweekly-notes details[open] summary::before {
     content: '−';
 }
 
-#projects details > div, #biweekly-notes details > div {
+#projects details > div,
+#biweekly-notes details > div {
     margin-top: 10px;
     margin-left: 20px;
 }
 
-#projects details p, #biweekly-notes details p {
+#projects details p,
+#biweekly-notes details p {
     font-size: 16px;
-    color: #555;
+    color: #4A423E;
     line-height: 1.6;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-#projects details h3, #biweekly-notes details h3 {
+#projects details h3,
+#biweekly-notes details h3 {
     font-size: 16px;
-    color: #222;
+    color: #1E1C1A;
     margin-top: 20px;
     margin-bottom: 5px;
 }
 
-#projects details li, #biweekly-notes details li {
+#projects details li,
+#biweekly-notes details li {
     font-size: 16px;
-    color: #555;
+    color: #4A423E;
     margin-bottom: 5px;
     line-height: 1.6;
 }
 
-#projects details li strong, #biweekly-notes details li strong {
-    color: #000;
+#projects details li strong,
+#biweekly-notes details li strong {
+    color: #2A2725;
 }
 
-#projects details li::before, #biweekly-notes details li::before {
+#projects details li::before,
+#biweekly-notes details li::before {
     content: '•';
     margin-right: 5px;
-    color: #888;
+    color: #AFA59C; /* warm muted bullet color */
 }
 
-#projects summary:hover, #biweekly-notes summary:hover {
-    color: #FF991C;
-    border-bottom: 1px solid #FF991C;
+#projects summary:hover,
+#biweekly-notes summary:hover {
+    color: #E89B3C;
+    border-bottom: 1px solid #E89B3C;
 }
 
 /*
  * PROJECT LINKS
  */
 .project-link a {
-    color: #555;
+    color: #4A423E;
     text-decoration: none;
     border-bottom: none;
 }
 
 .project-link a:hover {
-    color: #FF991C;
+    color: #E89B3C;
 }
 
 .project-link a i {
